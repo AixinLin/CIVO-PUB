@@ -14319,7 +14319,7 @@ __webpack_require__.r(__webpack_exports__);
 
 document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
-  
+  var button = document.getElementById('redirectbutton');
   var calendar = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["Calendar"](calendarEl, {
     plugins: [ _fullcalendar_interaction__WEBPACK_IMPORTED_MODULE_1___default.a, _fullcalendar_daygrid__WEBPACK_IMPORTED_MODULE_2___default.a, _fullcalendar_timegrid__WEBPACK_IMPORTED_MODULE_3___default.a, _fullcalendar_list__WEBPACK_IMPORTED_MODULE_4___default.a ],
     dateClick: function(info) {
@@ -14330,9 +14330,11 @@ document.addEventListener('DOMContentLoaded', function() {
       //info.dayEl.style.backgroundColor = 'red';
     },
     eventClick: function(info) {
-      alert('Event: ' + info.event.people);
+      //alert('Event: ' + info.event.people);
       // change the border color just for fun
       info.el.style.borderColor = 'red';
+      document.getElementById("redirectform").action = "/course";
+      button.click();
     },
     header: {
       left: 'prev,next today',
@@ -14346,11 +14348,15 @@ document.addEventListener('DOMContentLoaded', function() {
     eventLimit: true, // allow "more" link when too many events
     events: [
       {
-        title: 'All asdf Event',
+        //to pass the data, pass from the html, html from router
+        id:"abc",
+        title: 'All asdf Event\r\nhello',
         start: '2018-01-01',
+        backgroundColor: "red",
+        
       },
       {
-        title: 'Long Event',
+        title: 'Long Eventd',
         start: '2018-01-07',
         end: '2018-01-10',
         people: '30',

@@ -92,7 +92,7 @@
                                             <li class="dropdown-submenu"><a href="#"><i class="fa fa-heart"></i>Headers</a>
                                                 <ul class="dropdown-menu">
                                                     <li><a href="header.html">Light</a></li>
-                                                    <li><a href="header-dark.html">Dark</a></li>
+                                                    <li><a href="heade-r-dark.html">Dark</a></li>
                                                     <li><a href="header-transparent.html">Transparent</a></li>
                                                     <li class="dropdown-submenu"><a href="#">Semi Transparent</a>
                                                         <ul class="dropdown-menu">
@@ -150,118 +150,71 @@
                         </div>
                     </div>
                     <!--end: Navigation-->
+                    
                 </div>
             </div>
         </header>
         <!-- end: Header -->
 
-        <!-- SERVICES -->
+        <!-- start: Form-->
         <section>
             <div class="container">
-                <div class="heading heading-center">
-                    <h2><%= title %></h2>
-                    <p></p>
-                </div>
-                <div>
-                    <button type="button" class="btn btn-primary">Add Course</button>
-                    <button type="button" class="btn btn-primary">Edit Course</button>
-                    <button type="button" class="btn btn-primary">Add Event</button>
-                    <button type="button" class="btn btn-primary">Edit Event</button>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-4" data-animation="fadeInUp" data-animation-delay="0">
-                        <div class="icon-box effect medium border small">
-                            <div class="icon">
-                                <a href="#"><i class="fa fa-plug"></i></a>
+                <form method="POST">
+                        <!-- <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputCourse">Course Name</label>
+                                <input class="form-control" id="inputEmail4" placeholder="Email" type="email">
                             </div>
-                            <h3>Powerful template</h3>
-                            <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Suspendisse condimentum porttitor cursumus.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4" data-animation="fadeInUp" data-animation-delay="200">
-                        <div class="icon-box effect medium border small">
-                            <div class="icon">
-                                <a href="#"><i class="fa fa-desktop"></i></a>
+                            <div class="form-group col-md-6">
+                                <label for="inputLocation">Course Description</label>
+                                <input class="form-control" id="inputPassword4" placeholder="Password" type="password">
                             </div>
-                            <h3>Flexible Layouts</h3>
-                            <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Suspendisse condimentum porttitor cursumus.</p>
+                        </div> -->
+                        <div class="form-group">
+                                <label for="inputCourse">Course Name</label>
+                                <input class="form-control" id="inputEmail4" name="courseName"placeholder="Coursename" type="text">
                         </div>
-                    </div>
-                    <div class="col-lg-4" data-animation="fadeInUp" data-animation-delay="400">
-                        <div class="icon-box effect medium border small">
-                            <div class="icon">
-                                <a href="#"><i class="fa fa-cloud"></i></a>
+                        <div class="form-group">
+                            <label for="inputAddress">Address</label>
+                            <input class="form-control" id="inputAddress" placeholder="1234 Main St" type="text">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputCity">City</label>
+                                <input class="form-control" id="inputCity" type="text">
                             </div>
-                            <h3>Retina Ready</h3>
-                            <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Suspendisse condimentum porttitor cursumus.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4" data-animation="fadeInUp" data-animation-delay="600">
-                        <div class="icon-box effect medium border small">
-                            <div class="icon">
-                                <a href="#"><i class="far fa-lightbulb"></i></a>
+                            <div class="form-group col-md-4">
+                                <label for="inputState">State</label>
+                                <select id="inputState" class="form-control">
+                                    <option selected="">Choose...</option>
+                                    <option>Ontario</option>
+                                    <option>Quebec</option>
+                                </select>
                             </div>
-                            <h3>Fast processing</h3>
-                            <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Suspendisse condimentum porttitor cursumus.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4" data-animation="fadeInUp" data-animation-delay="800">
-                        <div class="icon-box effect medium border small">
-                            <div class="icon">
-                                <a href="#"><i class="fa fa-trophy"></i></a>
+                            <div class="form-group col-md-2">
+                                <label for="inputZip">Zip</label>
+                                <input class="form-control" id="inputZip" type="text">
                             </div>
-                            <h3>Unlimited Colors</h3>
-                            <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Suspendisse condimentum porttitor cursumus.</p>
                         </div>
-                    </div>
-                    <div class="col-lg-4" data-animation="fadeInUp" data-animation-delay="1000">
-                        <div class="icon-box effect medium border small">
-                            <div class="icon">
-                                <a href="#"><i class="fa fa-thumbs-up"></i></a>
+                        <div class="form-group">
+                            <label for="course-description">Course Description</label>
+                            <textarea class="form-control" id="course-description" rows="3"></textarea>
+                        </div>
+                        <!-- <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" id="gridCheck" type="checkbox">
+                                <label class="form-check-label" for="gridCheck">
+                                    Check me out
+                                </label>
                             </div>
-                            <h3>Premium Sliders</h3>
-                            <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Suspendisse condimentum porttitor cursumus.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4" data-animation="fadeInUp" data-animation-delay="1200">
-                        <div class="icon-box effect medium border small">
-                            <div class="icon">
-                                <a href="#"><i class="fa fa-rocket"></i></a>
-                            </div>
-                            <h3>Modern Design</h3>
-                            <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Suspendisse condimentum porttitor cursumus.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4" data-animation="fadeInUp" data-animation-delay="1400">
-                        <div class="icon-box effect medium border small">
-                            <div class="icon">
-                                <a href="#"><i class="fa fa-flask"></i></a>
-                            </div>
-                            <h3>Clean Modern Code</h3>
-                            <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Suspendisse condimentum porttitor cursumus.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4" data-animation="fadeInUp" data-animation-delay="1600">
-                        <div class="icon-box effect medium border small">
-                            <div class="icon">
-                                <a href="#"><i class="fa fa-umbrella"></i></a>
-                            </div>
-                            <h3>Free Updates & Support</h3>
-                            <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Suspendisse condimentum porttitor cursumus.</p>
-                        </div>
-                    </div>
-                </div>
+                        </div> -->
+                        <button type="submit" class="btn">Add Course</button>
+                    </form>
             </div>
-
-        </section>
-        <!-- end: SERVICES -->
-
-       
+       </section>
 
     </div>
+    
     <!-- end: Wrapper -->
 
     <!-- Go to top button -->

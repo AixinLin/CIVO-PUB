@@ -20,10 +20,13 @@ app.set('view engine', 'html');
 app.set('views', path.join(__dirname, 'public'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+//app.use(express.json()).use(express.urlencoded());
+//app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-
+app.use(require('express-formidable')({
+  uploadDir: path.join(__dirname, 'public/img'), // 上传文件目录
+  keepExtensions: true// 保留后缀
+}))
 
 app.use('/', homeRouter);
 app.use('/users', usersRouter);
@@ -35,6 +38,7 @@ app.use('/course',courseRouter);
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
 
 
 // error handler

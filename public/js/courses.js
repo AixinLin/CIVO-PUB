@@ -6,7 +6,7 @@ import listPlugin from '@fullcalendar/list';
 
 document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
-  
+  var button = document.getElementById('redirectbutton');
   var calendar = new Calendar(calendarEl, {
     plugins: [ interactionPlugin, dayGridPlugin, timeGridPlugin, listPlugin ],
     dateClick: function(info) {
@@ -17,9 +17,11 @@ document.addEventListener('DOMContentLoaded', function() {
       //info.dayEl.style.backgroundColor = 'red';
     },
     eventClick: function(info) {
-      alert('Event: ' + info.event.people);
+      //alert('Event: ' + info.event.people);
       // change the border color just for fun
       info.el.style.borderColor = 'red';
+      document.getElementById("redirectform").action = "/course";
+      button.click();
     },
     header: {
       left: 'prev,next today',
@@ -33,11 +35,15 @@ document.addEventListener('DOMContentLoaded', function() {
     eventLimit: true, // allow "more" link when too many events
     events: [
       {
-        title: 'All asdf Event',
+        //to pass the data, pass from the html, html from router
+        id:"abc",
+        title: 'All asdf Event\r\nhello',
         start: '2018-01-01',
+        backgroundColor: "red",
+        
       },
       {
-        title: 'Long Event',
+        title: 'Long Eventd',
         start: '2018-01-07',
         end: '2018-01-10',
         people: '30',

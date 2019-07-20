@@ -20,7 +20,7 @@ exports.userModel = mongoose.model('user',new mongoose.Schema({
   type:String
 }),'user');
 
-exports.eventModel = mongoose.model('eventModel',new mongoose.Schema({
+exports.eventModel = mongoose.model('event',new mongoose.Schema({
   id: String,
   title: String,
   name: String,
@@ -28,17 +28,20 @@ exports.eventModel = mongoose.model('eventModel',new mongoose.Schema({
   location: String,
   participant: String,
   type: String
-}));
+}),'event');
 
-exports.courseModel = mongoose.model('courseModel',new mongoose.Schema({
+exports.courseModel = mongoose.model('course',new mongoose.Schema({
   id: String,
   num_of_people: Number,
-  title: String,
-  location: String,
+  name: String,
+  city: String,
+  address: String,
+  state: String,
+  postal_code: String, 
   participant: String,
   start_time: Date,
   end_time: Date,
-}));
+}),'course');
 
 
 //var abc = new userModel()
