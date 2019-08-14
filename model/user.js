@@ -1,10 +1,20 @@
 var user = require('../config/mongo');
 var mongoose = require('mongoose');
+var ObjectId = require('mongodb').ObjectID;
 module.exports = {
     create: function(newUser){
         return user.userModel.create(newUser);
         //console.log(user.userModel);
     },
+    deleteByName: function(name){
+        return user.userModel.deleteMany({first_name: "yijunhe"});
+    },
+    addCourse: function(course, userId){
+        return user.userModel.findOneAndUpdate({_id:ObjectId(userId)}, {$addToSet: {courses:course}});
+    },
+    findUserById: function(userId){
+        return user.userModel.find({_id:ObjectId(userId)});
+    }
     
 }
 

@@ -10,35 +10,44 @@ db.once('open', function() {
 });
 
 exports.userModel = mongoose.model('user',new mongoose.Schema({
-  id: String,
+  id: mongoose.Schema.Types.ObjectId,
   first_name: String,
   last_name: String,
-  course_id: String,
-  event_id: String,
+  courses: [{
+    name: String,
+    num_of_people: Number,
+    start_time: Date,
+    end_time: Date,
+  }],
+  events: String,
   gender: String,
   password: String,
-  type:String
+  email: String,
 }),'user');
 
 exports.eventModel = mongoose.model('event',new mongoose.Schema({
-  id: String,
-  title: String,
+  id: mongoose.Schema.Types.ObjectId,
   name: String,
   description: String,
   location: String,
-  participant: String,
-  type: String
+  participant: [{
+    first_name:String,
+    last_name: String,
+    email:String
+  }],
+  type: String,
+  date: Date
 }),'event');
 
 exports.courseModel = mongoose.model('course',new mongoose.Schema({
-  id: String,
+  id: mongoose.Schema.Types.ObjectId,
   num_of_people: Number,
   name: String,
-  city: String,
-  address: String,
-  state: String,
-  postal_code: String, 
-  participant: String,
+  attendee: [{
+    first_name:String,
+    last_name: String,
+    email:String
+  }],
   start_time: Date,
   end_time: Date,
 }),'course');

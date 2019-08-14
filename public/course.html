@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+
+ <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="INSPIRO" />
@@ -9,31 +10,61 @@
     <!-- Document title -->
     <title>POLO | The Multi-Purpose HTML5 Template</title>
     <!-- Stylesheets & Fonts -->
-    <!--FONT LINK--><link href="/css/plugins.css" rel="stylesheet">
-    <link href="/css/style.css" rel="stylesheet">
-    <link href="/css/responsive.css" rel="stylesheet">
-
+    <link href="css/plugins.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet"> 
+ 
+    
 </head>
 
 <body>
+	
 
+	<!-- Wrapper -->
+	<div id="wrapper">
 
-    <!-- Wrapper -->
-    <div id="wrapper">
+		 <!-- Topbar -->
+        <div id="topbar" class="topbar-transparent topbar-fullwidth dark d-none d-xl-block d-lg-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="top-menu">
+                            <li><a href="#">Phone: +1 (234) 567-890</a></li>
+                            <li><a href="#">Email: contact@inspiro-media.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 d-none d-sm-block">
+                        <div class="social-icons social-icons-colored-hover">
+                            <ul>
+                                <li class="social-facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li class="social-twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li class="social-google"><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                <li class="social-pinterest"><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                                <li class="social-vimeo"><a href="#"><i class="fab fa-vimeo"></i></a></li>
+                                <li class="social-linkedin"><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                                <li class="social-dribbble"><a href="#"><i class="fab fa-dribbble"></i></a></li>
+                                <li class="social-youtube"><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                <li class="social-rss"><a href="#"><i class="fa fa-rss"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end: Topbar -->
 
         <!-- Header -->
-        <header id="header" class="header-transparent dark">
-            <div id="header-wrap">
-                <div class="container">
-                    <!--Logo-->
-                    <div id="logo">
-                        <a href="index.html" class="logo" data-dark-logo="images/logo-dark.png">
-                            <img src="/images/logo.png" alt="Polo Logo">
-                        </a>
-                    </div>
-                    <!--End: Logo-->
+        <header id="header" class="header-fullwidth header-transparent dark">
+			<div id="header-wrap">
+				<div class="container"> <!--Logo-->
+					<div id="logo">
+						<a href="index.html" class="logo" data-dark-logo="images/logo-dark.png">
+							<img src="images/logo.png" alt="Polo Logo">
+						</a>
+					</div>
+					<!--End: Logo-->
 
-                    <!--Top Search Form-->
+					 <!--Top Search Form-->
                     <div id="top-search">
                         <form action="search-results-page.html" method="get">
                             <input type="text" name="q" class="form-control" value="" placeholder="Start typing & press  &quot;Enter&quot;">
@@ -61,20 +92,9 @@
                                         <i class="fa fa-shopping-cart"></i></a>
                                 </div>
                                 <!--end: shopping cart-->
-                            </li>
-                            <li>
-                                <div class="topbar-dropdown">
-                                    <a class="title"><i class="fas fa-globe-americas"></i></a>
-                                    <div class="dropdown-list">
-                                        <a class="list-entry" href="#">French</a>
-                                        <a class="list-entry" href="#">Spanish</a>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+                            </li></ul>
                     </div>
                     <!--end: Header Extras-->
-
                     <!--Navigation Resposnive Trigger-->
                     <div id="mainMenu-trigger">
                         <button class="lines-button x"> <span class="lines"></span> </button>
@@ -85,848 +105,150 @@
                     <div id="mainMenu" class="light">
                         <div class="container">
                             <nav>
-                                <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li class="dropdown"> <a href="#">Features</a>
-                                        <ul class="dropdown-menu">
-                                            <li class="dropdown-submenu"><a href="#"><i class="fa fa-heart"></i>Headers</a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="header.html">Light</a></li>
-                                                    <li><a href="header-dark.html">Dark</a></li>
-                                                    <li><a href="header-transparent.html">Transparent</a></li>
-                                                    <li class="dropdown-submenu"><a href="#">Semi Transparent</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="header-light-transparent.html">Light</a></li>
-                                                            <li><a href="header-dark-transparent.html">Dark</a></li>
-                                                            <li><a href="header-colored-transparent.html">Colored</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="header-colored.html">Colored</a></li>
-                                                    <li><a href="header-fullwidth.html">Fullwidth</a></li>
-                                                    <li class="dropdown-submenu"><a href="#">Modern</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="header-modern.html">Light</a></li>
-                                                            <li><a href="header-modern-dark.html">Dark</a></li>
-                                                            <li><a href="header-modern-transparent.html">Transparent</a></li>
-                                                            <li><a href="header-modern-colored.html">Colored</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="header-mini.html">Mini</a></li>
-                                                    <li><a href="header-static.html">Static</a></li>
-                                                    <li><a href="header-no-sticky.html">No Sticky</a></li>
-                                                    <li><a href="header-sticky-responsive.html">Sticky Responsive</a></li>
-                                                    <li class="dropdown-submenu"><a href="#">Logo Positions</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="header-logo.html">Left</a></li>
-                                                            <li><a href="header-logo-right.html">Right</a></li>
-                                                            <li><a href="header-logo-center.html">Center</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown-submenu"><a href="#">Menu Positions</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="header-menu-left.html">Left</a></li>
-                                                            <li><a href="header-menu-right.html">Right</a></li>
-                                                            <li><a href="header-menu-center.html">Center</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown-submenu"><a href="#">Topbar</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="header-topbar.html">Light</a></li>
-                                                            <li><a href="header-topbar-dark.html">Dark</a></li>
-                                                            <li><a href="header-topbar-transparent.html">Transparent</a></li>
-                                                            <li><a href="header-topbar-colored.html">Colored</a></li>
-                                                            <li><a href="header-topbar-fullwidth.html">Fullwidth</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="header-under.html">Under Slider</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown-submenu"><a href="#"><i class="fas fa-bars"></i>Main Menu<span class="badge badge-danger">NEW</span></a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="menu.html">Default</a></li>
-                                                    <li><a href="menu-split.html">Split Menu</a></li>
-                                                    <li><a href="menu-sub-title.html">Sub Title Menu</a></li>
-                                                    <li><a href="menu-slide.html">Slide Menu</a></li>
-                                                    <li><a href="menu-overlay.html">Overlay Menu</a></li>
-                                                    <li><a href="menu-creative.html">Creative Menu</a></li>
-                                                    <li><a href="menu-lines.html">Lines Menu</a></li>
-                                                    <li class="dropdown-submenu"><a href="#">Outline</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="menu-outline.html">Default</a></li>
-                                                            <li><a href="menu-outline-dark.html">Dark</a></li>
-                                                            <li><a href="menu-outline-light.html">Light</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown-submenu"><a href="#">Rounded</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="menu-rounded.html">Default</a></li>
-                                                            <li><a href="menu-rounded-dark.html">Dark</a></li>
-                                                            <li><a href="menu-rounded-light.html">Light</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown-submenu"><a href="#">Positions</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="menu-left.html">Left Aligned</a></li>
-                                                            <li><a href="menu-center.html">Center Aligned</a></li>
-                                                            <li><a href="menu-right.html">Right Aligned</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="menu-dots.html">Dots Menu</a></li>
-                                                    <li><a href="menu-one-page.html">One Page Menu</a></li>
-                                                    <li><a href="menu-hover-background.html">Hover Background</a></li>
-                                                    <li><a href="menu-button.html">Button Version</a></li>
-                                                    <li><a href="menu-social-icons.html">Social Icons Version</a></li>
-                                                    <li><a href="menu-onclick.html">OnClick Open</a></li>
-                                                    <li><a href="menu-rounded-dropdown.html">Rounded Dropdown</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown-submenu"><a href="#"><i class="fas fa-sliders-h"></i>Sliders</a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="slider-revolution-slider.html">Revolution Slider</a></li>
-                                                    <li><a href="slider-owl-slider.html">OWL Slider</a></li>
-                                                    <li><a href="slider-static-media-image.html">Fullscreen Image</a></li>
-                                                    <li><a href="slider-static-media-parallax.html">Fullscreen Parallax</a></li>
-                                                    <li><a href="slider-static-media-text-rotator.html" class="current">Fullscreen Text Rotator</a></li>
-                                                    <li><a href="slider-static-media-video.html">Fullscreen HTML5 Video</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown-submenu"><a href="#"><i class="fa fa-star"></i>Page title</a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="page-title-classic.html">Classic version</a></li>
-                                                    <li><a href="page-title.html">Image background</a> </li>
-                                                    <li><a href="page-title-video.html">Video background</a> </li>
-                                                    <li><a href="page-title-pattern.html">Pattern background</a> </li>
-                                                    <li><a href="page-title-background-color.html">Colored background</a> </li>
-                                                    <li><a href="page-title-default-header.html">Default header</a></li>
-                                                    <li><a href="page-title-animated.html">Animated</a></li>
-                                                    <li><a href="page-title-center.html">Center Aligned</a></li>
-                                                    <li><a href="page-title-right.html">Right Aligned</a></li>
-                                                    <li><a href="page-title.html">Left Aligned</a></li>
+								<ul><li><a href="index.html">Home</a></li>
+									
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<!--END: NAVIGATION-->
+				</div>
+			</div>
+		</header>
+		<!-- end: Header -->
+    
 
+    
 
-                                                    <!--<li><a href="page-title-small.html">Small version</a> </li>-->
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown-submenu"><a href="#"><i class="fa fa-align-left"></i>Page Menu<span class="badge badge-danger">NEW</span></a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="page-menu.html">Rounded</a> </li>
-                                                    <li><a href="page-menu-outline.html">Outline</a> </li>
-                                                    <li><a href="page-menu-lines.html">Lines</a> </li>
-                                                    <li><a href="page-menu-classic.html">Classic</a> </li>
-                                                    <li><a href="page-menu-line-bottom.html">Line Bottom</a> </li>
-                                                    <li><a href="page-menu-light.html">Light</a> </li>
-                                                    <li><a href="page-menu-dark.html">Dark</a> </li>
-                                                    <li><a href="page-menu-creative.html">Creative</a> </li>
-                                                    <li><a href="page-menu-colored-background.html">Colored Background</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown-submenu"><a href="#"><i class="fa fa-columns"></i>Side Panel</a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="side-panel.html">Push</a> </li>
-                                                    <li><a href="side-panel-reval.html">Reval</a></li>
-                                                    <li><a href="side-panel-slide-in.html">Slide In</a></li>
-                                                    <li><a href="side-panel-static.html">Static</a></li>
-                                                    <li><a href="side-panel-dark.html">Dark version</a></li>
-                                                    <li><a href="side-panel-right.html">Push Right</a> </li>
-                                                    <li><a href="side-panel-reval-right.html">Reval Right</a></li>
-                                                    <li><a href="side-panel-slide-in-right.html">Slide In Right</a></li>
-                                                    <li><a href="side-panel-static-right.html">Static Right</a></li>
-
-                                                </ul>
-                                            </li>
-                                            <li><a href="widgets.html"><i class="fa fa-th"></i>Widgets </a></li>
-                                            <li class="dropdown-submenu"><a href="#"><i class="fa fa-th-list"></i>Sidebars</a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="sidebar-sticky.html">Sticky version</a> </li>
-<li><a href="sidebar.html">Left aligned</a> </li>
-                                                    <li><a href="sidebar-right.html">Right aligned</a> </li>
-                                                    <li><a href="sidebar-both.html">Both Sidebars</a> </li>
-                                                    <li><a href="sidebar-modern.html">Modern</a> </li>
-                                                    <li><a href="sidebar-modern-right.html">Modern Right</a> </li>
-                                                    <li><a href="sidebar-modern-both.html">Modern Both Sidebars</a> </li>
-
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown-submenu"><a href="#"><i class="fa fa-window-minimize"></i>Footers</a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="footer.html#footer">Default</a> </li>
-													<li><a href="footer-dark.html#footer">Dark</a> </li>
-                                                    <li><a href="footer-1.html#footer">Footer 1</a> </li>
-                                                    <li><a href="footer-2.html#footer">Footer 2</a> </li>
-                                                    <li><a href="footer-3.html#footer">Footer 3</a> </li>
-                                                    <li><a href="footer-4.html#footer">Footer 4</a> </li>
-                                                    <li><a href="footer-5.html#footer">Footer 5</a> </li>
-                                                    <li><a href="#">Comming soon</a> </li>
-                                                    <li><a href="#">Comming soon</a> </li>
-                                                    <li><a href="#">Comming soon</a> </li>                                                    
-                                                    <li><a href="#">Comming soon</a> </li>
-                                                    <li><a href="#">Comming soon</a> </li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="page-loaders.html"><i class="fa fa-spinner"></i>Page Loaders<span class="badge badge-danger">NEW</span></a></li>
-                                            <li class="dropdown-submenu"><a href="#"><i class="fa fa-expand"></i>Modal Auto Open<span class="badge badge-danger">NEW</span></a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="modal-auto-open.html">Sample Text</a></li>
-                                                    <li><a href="modal-auto-open-newsletter.html">Newsletter</a></li>
-                                                    <li><a href="modal-auto-open-shop.html">Shop Sale</a></li>
-                                                    <li><a href="modal-auto-open-login.html">Login Form</a></li>
-                                                    <li><a href="modal-auto-open-audio.html">Audio</a></li>
-                                                    <li><a href="modal-auto-open-video.html">HTML5 Video</a></li>
-                                                    <li><a href="modal-auto-open-youtube.html">YouTube</a></li>
-                                                    <li><a href="modal-auto-open-vimeo.html">Vimeo</a></li>
-                                                    <li><a href="modal-auto-open-iframe.html">Iframe</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown-submenu"><a href="#"><i class="fa fa-bullhorn"></i>Cookie Notify<span class="badge badge-danger">NEW</span></a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="cookie-notify.html">Top position</a> </li>
-                                                    <li><a href="cookie-notify-bottom.html">Bottom position</a> </li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown-submenu"><a href="#"><i class="fa fa-tags"></i>Menu Labels</a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="#">Label (new)<span class="badge badge-danger">NEW</span></a> </li>
-                                                    <li><a href="#">Label (hot)<span class="badge badge-danger">HOT</span></a> </li>
-                                                    <li><a href="#">Label (popular)<span class="badge badge-success">POPULAR</span></a> </li>
-                                                    <li><a href="#">Label (sale)<span class="badge badge-warning">SALE</span></a> </li>
-                                                    <li><a href="#">Label (info)<span class="badge badge-info">INFO</span></a> </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                  
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                    <!--end: Navigation-->
-                </div>
+		<!-- Page title -->
+		<section id="page-title" data-parallax-image="images/parallax/5.jpg">
+        <div class="container">
+            <div class="page-title">
+            <h1>Course</h1>
+            <span>Inspiration comes of working every day.</span> 
             </div>
-        </header>
-        <!-- end: Header -->
-
-        <!-- SERVICES -->
-        <section>
-            <div class="container">
-                <div class="heading heading-center">
-                    <h2><%= title %></h2>
-                    <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Suspendisse condimentum porttitor cursumus.</p>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-4" data-animation="fadeInUp" data-animation-delay="0">
-                        <div class="icon-box effect medium border small">
-                            <div class="icon">
-                                <a href="#"><i class="fa fa-plug"></i></a>
-                            </div>
-                            <h3>Powerful template</h3>
-                            <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Suspendisse condimentum porttitor cursumus.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4" data-animation="fadeInUp" data-animation-delay="200">
-                        <div class="icon-box effect medium border small">
-                            <div class="icon">
-                                <a href="#"><i class="fa fa-desktop"></i></a>
-                            </div>
-                            <h3>Flexible Layouts</h3>
-                            <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Suspendisse condimentum porttitor cursumus.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4" data-animation="fadeInUp" data-animation-delay="400">
-                        <div class="icon-box effect medium border small">
-                            <div class="icon">
-                                <a href="#"><i class="fa fa-cloud"></i></a>
-                            </div>
-                            <h3>Retina Ready</h3>
-                            <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Suspendisse condimentum porttitor cursumus.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4" data-animation="fadeInUp" data-animation-delay="600">
-                        <div class="icon-box effect medium border small">
-                            <div class="icon">
-                                <a href="#"><i class="far fa-lightbulb"></i></a>
-                            </div>
-                            <h3>Fast processing</h3>
-                            <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Suspendisse condimentum porttitor cursumus.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4" data-animation="fadeInUp" data-animation-delay="800">
-                        <div class="icon-box effect medium border small">
-                            <div class="icon">
-                                <a href="#"><i class="fa fa-trophy"></i></a>
-                            </div>
-                            <h3>Unlimited Colors</h3>
-                            <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Suspendisse condimentum porttitor cursumus.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4" data-animation="fadeInUp" data-animation-delay="1000">
-                        <div class="icon-box effect medium border small">
-                            <div class="icon">
-                                <a href="#"><i class="fa fa-thumbs-up"></i></a>
-                            </div>
-                            <h3>Premium Sliders</h3>
-                            <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Suspendisse condimentum porttitor cursumus.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4" data-animation="fadeInUp" data-animation-delay="1200">
-                        <div class="icon-box effect medium border small">
-                            <div class="icon">
-                                <a href="#"><i class="fa fa-rocket"></i></a>
-                            </div>
-                            <h3>Modern Design</h3>
-                            <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Suspendisse condimentum porttitor cursumus.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4" data-animation="fadeInUp" data-animation-delay="1400">
-                        <div class="icon-box effect medium border small">
-                            <div class="icon">
-                                <a href="#"><i class="fa fa-flask"></i></a>
-                            </div>
-                            <h3>Clean Modern Code</h3>
-                            <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Suspendisse condimentum porttitor cursumus.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4" data-animation="fadeInUp" data-animation-delay="1600">
-                        <div class="icon-box effect medium border small">
-                            <div class="icon">
-                                <a href="#"><i class="fa fa-umbrella"></i></a>
-                            </div>
-                            <h3>Free Updates & Support</h3>
-                            <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Suspendisse condimentum porttitor cursumus.</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="breadcrumb">
+                            <ul>
+                <li><a href="#">Home</a> </li>
+                <li><a href="#">Shortcodes</a> </li>
+                <li class="active"><a href="#">Popover & Tooltip</a> </li>
+            </ul>
             </div>
-
+        </div>
         </section>
-        <!-- end: SERVICES -->
+        <!-- end: Page title --> 
 
-        <!-- COUNTERS -->
-        <section class="text-light p-t-150 p-b-150 background-overlay" data-parallax-image="images/parallax/12.jpg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3">
+        <div>
 
-                        <div class="text-center">
-                            <div class="icon"><i class="fa fa-3x fa-code"></i></div>
-                            <div class="counter"> <span data-speed="3000" data-refresh-interval="50" data-to="12416" data-from="600" data-seperator="true"></span> </div>
-                            <div class="seperator seperator-small"></div>
-                            <p>LINES OF CODE</p>
-                        </div>
-                    </div>
+            Actual course
+        </div>
+    
+    
 
-                    <div class="col-lg-3">
-
-                        <div class="text-center">
-                            <div class="icon"><i class="fa fa-3x fa-coffee"></i></div>
-                            <div class="counter"> <span data-speed="4500" data-refresh-interval="23" data-to="365" data-from="100" data-seperator="true"></span> </div>
-                            <div class="seperator seperator-small"></div>
-                            <p>CUPS OF COFFEE</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3">
-
-                        <div class="text-center">
-                            <div class="icon"><i class="fa fa-3x fa-rocket"></i></div>
-                            <div class="counter"> <span data-speed="3000" data-refresh-interval="12" data-to="114" data-from="50" data-seperator="true"></span> </div>
-                            <div class="seperator seperator-small"></div>
-                            <p>FINISHED PROJECTS</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3">
-
-                        <div class="text-center">
-                            <div class="icon"><i class="fa fa-3x fa-smile-o"></i></div>
-                            <div class="counter"> <span data-speed="4550" data-refresh-interval="50" data-to="14825" data-from="48" data-seperator="true"></span> </div>
-                            <div class="seperator seperator-small"></div>
-                            <p>SATISFIED CLIENTS</p>
-                        </div>
-                    </div>
-                </div>
+<!-- Footer -->
+  <footer id="footer" class="footer-light">
+    <div class="footer-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4"> 
+            <!-- Footer widget area 1 -->
+            <div class="widget  widget-contact-us" style="background-image: url('images/world-map-dark.png'); background-position: 50% 20px; background-repeat: no-repeat">
+              <h4>About POLO</h4>
+              <ul class="list-icon">
+                <li><i class="fa fa-map-marker-alt"></i> 795 Folsom Ave, Suite 600 <br>
+                  San Francisco, CA 94107</li>
+                <li><i class="fa fa-phone"></i> (123) 456-7890 </li>
+                <li><i class="far fa-envelope"></i> <a href="mailto:first.last@example.com">first.last@example.com</a> </li>
+                <li> <br>
+                  <i class="far fa-clock"></i>Monday - Friday: <strong>08:00 - 22:00</strong> <br>
+                  Saturday, Sunday: <strong>Closed</strong> </li>
+              </ul>
+              <!-- Social icons -->
+              <div class="social-icons social-icons-border float-left m-t-20">
+                <ul>
+                  <li class="social-rss"><a href="#"><i class="fa fa-rss"></i></a></li>
+                  <li class="social-facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                  <li class="social-twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li class="social-vimeo"><a href="#"><i class="fab fa-vimeo"></i></a></li>
+                  <li class="social-youtube"><a href="#"><i class="fab fa-youtube"></i></a></li>
+                  <li class="social-pinterest"><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                  <li class="social-gplus"><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                </ul>
+              </div>
+              <!-- end: Social icons --> 
             </div>
-        </section>
-        <!-- end: COUNTERS -->
-
-        <!-- BLOG -->
-        <section class="content background-grey">
-            <div class="container">
-                <div class="heading heading text-left">
-                    <h2>OUR BLOG</h2>
-                    <span class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla luctus. Fusce id mi diam, non ornare orci. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor. </span>
-                </div>
-                <div id="blog" class="grid-layout post-3-columns m-b-30" data-item="post-item">
-
-                    <!-- Post item-->
-                    <div class="post-item border">
-                        <div class="post-item-wrap">
-                            <div class="post-image">
-                                <a href="#">
-                                    <img alt="" src="/images/blog/12.jpg">
-                                </a>
-                                <span class="post-meta-category"><a href="">Lifestyle</a></span>
-                            </div>
-                            <div class="post-item-description">
-                                <span class="post-meta-date"><i class="fa fa-calendar-o"></i>Jan 21, 2017</span>
-                                <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span>
-                                <h2><a href="#">Lighthouse, standard post with a single image
-</a></h2>
-                                <p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus commodo dolor porta feugiat. Fusce at velit id ligula pharetra laoreet.</p>
-
-                                <a href="#" class="item-link">Read More <i class="fa fa-arrow-right"></i></a>
-
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end: Post item-->
-
-                    <!-- Post item-->
-                    <div class="post-item border">
-                        <div class="post-item-wrap">
-                            <div class="post-image">
-                                <a href="#">
-                                    <img alt="" src="/images/blog/17.jpg">
-                                </a>
-                                <span class="post-meta-category"><a href="">Science</a></span>
-                            </div>
-                            <div class="post-item-description">
-                                <span class="post-meta-date"><i class="fa fa-calendar-o"></i>Jan 21, 2017</span>
-                                <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span>
-
-                                <h2><a href="#">Lighthouse, standard post with a single image
-</a></h2>
-                                <p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus commodo dolor porta feugiat. Fusce at velit id ligula pharetra laoreet.</p>
-
-                                <a href="#" class="item-link">Read More <i class="fa fa-arrow-right"></i></a>
-
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end: Post item-->
-
-
-                    <!-- Post item-->
-                    <div class="post-item border">
-                        <div class="post-item-wrap">
-                            <div class="post-image">
-                                <a href="#">
-                                    <img alt="" src="/images/blog/18.jpg">
-                                </a>
-                                <span class="post-meta-category"><a href="">Science</a></span>
-                            </div>
-                            <div class="post-item-description">
-                                <span class="post-meta-date"><i class="fa fa-calendar-o"></i>Jan 21, 2017</span>
-                                <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span>
-
-                                <h2><a href="#">Lighthouse, standard post with a single image
-</a></h2>
-                                <p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus commodo dolor porta feugiat. Fusce at velit id ligula pharetra laoreet.</p>
-
-                                <a href="#" class="item-link">Read More <i class="fa fa-arrow-right"></i></a>
-
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end: Post item-->
-                </div>
+            <!-- end: Footer widget area 1 --> 
+          </div>
+          <div class="col-lg-2"> 
+            <!-- Footer widget area 2 -->
+            <div class="widget">
+              <h4>Quick LInks</h4>
+              <ul class="list-icon list-icon-arrow">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Shortcodes</a></li>
+              </ul>
             </div>
-        </section>
-        <!-- end: BLOG -->
-
-        <!-- CLIENTS -->
-        <section class="p-t-60">
-            <div class="container">
-                <div class="heading heading-center">
-                    <h2>CLIENTS</h2>
-                    <span class="lead">Our awesome clients we've had the pleasure to work with! </span>
+            <!-- end: Footer widget area 2 --> 
+          </div>
+          <div class="col-lg-3"> 
+            <!-- Footer widget area 3 -->
+            <div class="widget">
+              <h4>Latest From Our Blog</h4>
+              <div class="post-thumbnail-list">
+                <div class="post-thumbnail-entry">
+                  <div class="post-thumbnail-content">
+                    <a href="#">Suspendisse consectetur fringilla luctus</a>
+                    <span class="post-date"><i class="far fa-clock"></i> 6m ago</span> <span class="post-category"><i class="fa fa-tag"></i> Technology</span> </div>
                 </div>
-                <div class="carousel" data-items="6" data-items-sm="4" data-items-xs="3" data-items-xxs="2" data-margin="20" data-arrows="false" data-autoplay="true" data-autoplay-timeout="3000" data-loop="true">
-                    <div>
-                        <a href="#"><img alt="" src="/images/clients/1.png"> </a>
-                    </div>
-                    <div>
-                        <a href="#"><img alt="" src="/images/clients/2.png"> </a>
-                    </div>
-                    <div>
-                        <a href="#"><img alt="" src="/images/clients/3.png"> </a>
-                    </div>
-                    <div>
-                        <a href="#"><img alt="" src="/images/clients/4.png"> </a>
-                    </div>
-                    <div>
-                        <a href="#"><img alt="" src="/images/clients/5.png"> </a>
-                    </div>
-                    <div>
-                        <a href="#"><img alt="" src="/images/clients/6.png"> </a>
-                    </div>
-                    <div>
-                        <a href="#"><img alt="" src="/images/clients/7.png"> </a>
-                    </div>
-                    <div>
-                        <a href="#"><img alt="" src="/images/clients/8.png"> </a>
-                    </div>
-                    <div>
-                        <a href="#"><img alt="" src="/images/clients/9.png"> </a>
-                    </div>
+                <div class="post-thumbnail-entry">
+                  <div class="post-thumbnail-content">
+                    <a href="#">Consectetur adipiscing elit</a>
+                    <span class="post-date"><i class="far fa-clock"></i> 24h ago</span> <span class="post-category"><i class="fa fa-tag"></i> Lifestyle</span> </div>
                 </div>
+                <div class="post-thumbnail-entry">
+                  <div class="post-thumbnail-content">
+                    <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+                    <span class="post-date"><i class="far fa-clock"></i> 11h ago</span> <span class="post-category"><i class="fa fa-tag"></i> Lifestyle</span> </div>
+                </div>
+              </div>
             </div>
-
-        </section>
-        <!-- end: CLIENTS -->
-
-        <!-- TEAM -->
-        <section class="background-grey">
-            <div class="container">
-                <div class="heading heading-center">
-                    <h2>MEET OUR TEAM</h2>
-                    <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Suspendisse condimentum porttitor cursumus.</p>
-                </div>
-                <div class="row team-members">
-                    <div class="col-lg-3">
-                        <div class="team-member">
-                            <div class="team-image">
-                                <img src="/images/team/6.jpg">
-                            </div>
-                            <div class="team-desc">
-                                <h3>Alea Smith</h3>
-                                <span>Software Developer</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing tristique hendrerit laoreet. </p>
-                                <div class="align-center">
-                                    <a class="btn btn-xs btn-slide btn-light" href="#">
-                                        <i class="fab fa-facebook-f"></i>
-                                        <span>Facebook</span>
-                                    </a>
-                                    <a class="btn btn-xs btn-slide btn-light" href="#" data-width="100">
-                                        <i class="fab fa-twitter"></i>
-                                        <span>Twitter</span>
-                                    </a>
-                                    <a class="btn btn-xs btn-slide btn-light" href="#" data-width="118">
-                                        <i class="fab fa-instagram"></i>
-                                        <span>Instagram</span>
-                                    </a>
-                                    <a class="btn btn-xs btn-slide btn-light" href="mailto:#" data-width="80">
-                                        <i class="far fa-envelope"></i>
-                                        <span>Mail</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="team-member">
-                            <div class="team-image">
-                                <img src="/images/team/7.jpg">
-                            </div>
-                            <div class="team-desc">
-                                <h3>Ariol Doe</h3>
-                                <span>Software Developer</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing tristique hendrerit laoreet. </p>
-                                <div class="align-center">
-                                    <a class="btn btn-xs btn-slide btn-light" href="#">
-                                        <i class="fab fa-facebook-f"></i>
-                                        <span>Facebook</span>
-                                    </a>
-                                    <a class="btn btn-xs btn-slide btn-light" href="#" data-width="100">
-                                        <i class="fab fa-twitter"></i>
-                                        <span>Twitter</span>
-                                    </a>
-                                    <a class="btn btn-xs btn-slide btn-light" href="#" data-width="118">
-                                        <i class="fab fa-instagram"></i>
-                                        <span>Instagram</span>
-                                    </a>
-                                    <a class="btn btn-xs btn-slide btn-light" href="mailto:#" data-width="80">
-                                        <i class="far fa-envelope"></i>
-                                        <span>Mail</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="team-member">
-                            <div class="team-image">
-                                <img src="/images/team/8.jpg">
-                            </div>
-                            <div class="team-desc">
-                                <h3>Emma Ross</h3>
-                                <span>Software Developer</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing tristique hendrerit laoreet. </p>
-                                <div class="align-center">
-                                    <a class="btn btn-xs btn-slide btn-light" href="#">
-                                        <i class="fab fa-facebook-f"></i>
-                                        <span>Facebook</span>
-                                    </a>
-                                    <a class="btn btn-xs btn-slide btn-light" href="#" data-width="100">
-                                        <i class="fab fa-twitter"></i>
-                                        <span>Twitter</span>
-                                    </a>
-                                    <a class="btn btn-xs btn-slide btn-light" href="#" data-width="118">
-                                        <i class="fab fa-instagram"></i>
-                                        <span>Instagram</span>
-                                    </a>
-                                    <a class="btn btn-xs btn-slide btn-light" href="mailto:#" data-width="80">
-                                        <i class="far fa-envelope"></i>
-                                        <span>Mail</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="team-member">
-                            <div class="team-image">
-                                <img src="/images/team/9.jpg">
-                            </div>
-                            <div class="team-desc">
-                                <h3>Victor Loda</h3>
-                                <span>Software Developer</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing tristique hendrerit laoreet. </p>
-                                <div class="align-center">
-                                    <a class="btn btn-xs btn-slide btn-light" href="#">
-                                        <i class="fab fa-facebook-f"></i>
-                                        <span>Facebook</span>
-                                    </a>
-                                    <a class="btn btn-xs btn-slide btn-light" href="#" data-width="100">
-                                        <i class="fab fa-twitter"></i>
-                                        <span>Twitter</span>
-                                    </a>
-                                    <a class="btn btn-xs btn-slide btn-light" href="#" data-width="118">
-                                        <i class="fab fa-instagram"></i>
-                                        <span>Instagram</span>
-                                    </a>
-                                    <a class="btn btn-xs btn-slide btn-light" href="mailto:#" data-width="80">
-                                        <i class="far fa-envelope"></i>
-                                        <span>Mail</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+            <!-- end: Footer widget area 3 --> 
+          </div>
+          <div class="col-lg-3"> 
+            <!-- Footer widget area 4 -->
+            <div class="widget widget-tweeter" data-username="ardianmusliu" data-limit="2">
+              <h4>Recent Tweets</h4>
             </div>
-        </section>
-        <!-- end: TEAM -->
-
-        <!-- Footer -->
-        <footer id="footer" class="footer-light">
-            <div class="footer-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <!-- Footer widget area 1 -->
-                            <div class="widget clearfix widget-contact-us" style="background-image: url('images/world-map-dark.png'); background-position: 50% 20px; background-repeat: no-repeat">
-                                <h4>About POLO</h4>
-                                <ul class="list-icon">
-                                    <li><i class="fa fa-map-marker-alt"></i> 795 Folsom Ave, Suite 600
-                                        <br>San Francisco, CA 94107</li>
-                                    <li><i class="fa fa-phone"></i> (123) 456-7890 </li>
-                                    <li><i class="far fa-envelope"></i> <a href="mailto:first.last@example.com">first.last@example.com</a>
-                                    </li>
-                                    <li>
-                                        <br><i class="far fa-clock"></i>Monday - Friday: <strong>08:00 - 22:00</strong>
-                                        <br>Saturday, Sunday: <strong>Closed</strong>
-                                    </li>
-                                </ul>
-                                <!-- Social icons -->
-                                <div class="social-icons social-icons-border float-left m-t-20">
-                                    <ul>
-                                        <li class="social-rss"><a href="#"><i class="fa fa-rss"></i></a></li>
-                                        <li class="social-facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li class="social-twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li class="social-vimeo"><a href="#"><i class="fab fa-vimeo"></i></a></li>
-                                        <li class="social-youtube"><a href="#"><i class="fab fa-youtube"></i></a></li>
-                                        <li class="social-pinterest"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                                        <li class="social-gplus"><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                    </ul>
-                                </div>
-                                <!-- end: Social icons -->
-                            </div>
-                            <!-- end: Footer widget area 1 -->
-                        </div>
-                        <div class="col-lg-2">
-                            <!-- Footer widget area 2 -->
-                            <div class="widget">
-                                <h4>Quick LInks</h4>
-                                <ul class="list-icon list-icon-arrow">
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#">Contact</a></li>
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">Blog</a></li>
-                                    <li><a href="#">Portfolio</a></li>
-                                    <li><a href="#">Shortcodes</a></li>
-                                </ul>
-                            </div>
-                            <!-- end: Footer widget area 2 -->
-                        </div>
-                        <div class="col-lg-3">
-                            <!-- Footer widget area 3 -->
-                            <div class="widget">
-                                <h4>Latest From Our Blog</h4>
-                                <div class="post-thumbnail-list">
-                                    <div class="post-thumbnail-entry">
-
-                                        <div class="post-thumbnail-content">
-                                            <a href="#">Suspendisse consectetur fringilla luctus</a>
-                                            <span class="post-date"><i class="far fa-clock"></i> 6m ago</span>
-                                            <span class="post-category"><i class="fa fa-tag"></i> Technology</span>
-                                        </div>
-                                    </div>
-                                    <div class="post-thumbnail-entry">
-
-                                        <div class="post-thumbnail-content">
-                                            <a href="#">Consectetur adipiscing elit</a>
-                                            <span class="post-date"><i class="far fa-clock"></i> 24h ago</span>
-                                            <span class="post-category"><i class="fa fa-tag"></i> Lifestyle</span>
-                                        </div>
-                                    </div>
-                                    <div class="post-thumbnail-entry">
-
-                                        <div class="post-thumbnail-content">
-                                            <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
-                                            <span class="post-date"><i class="far fa-clock"></i> 11h ago</span>
-                                            <span class="post-category"><i class="fa fa-tag"></i> Lifestyle</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end: Footer widget area 3 -->
-                        </div>
-                        <div class="col-lg-3">
-                            <!-- Footer widget area 4 -->
-                            <div class="widget widget-tweeter" data-username="ardianmusliu" data-limit="2">
-                                <h4>Recent Tweets</h4>
-                            </div>
-                            <!-- end: Footer widget area 4 -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright-content">
-                <div class="container">
-                    <div class="copyright-text text-center">&copy; 2018 POLO - Responsive Multi-Purpose HTML5 Template. All Rights Reserved.<a href="http://www.inspiro-media.com" target="_blank">INSPIRO</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- end: Footer -->
-
+            <!-- end: Footer widget area 4 --> 
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- end: Wrapper -->
+    <div class="copyright-content">
+      <div class="container">
+        <div class="copyright-text text-center">&copy; 2018 POLO -  Responsive Multi-Purpose HTML5 Template. All Rights Reserved.<a href="http://www.inspiro-media.com" target="_blank">INSPIRO</a> </div>
+      </div>
+    </div>
+  </footer>
+  <!-- end: Footer -->
+
+</div>    <!-- end: Wrapper -->
 
     <!-- Go to top button -->
     <a id="goToTop"><i class="fa fa-angle-up top-icon"></i><i class="fa fa-angle-up"></i></a>
 
-    <!--Plugins-->
-    <script src="/js/jquery.js"></script>
-    <script src="/js/plugins.js"></script>
+<!--Plugins-->
+ <script src="js/jquery.js"></script>
+ <script src="js/plugins.js"></script>
 
-    <!--Template functions-->
-    <script src="/js/functions.js"></script>
 
-    <!-- SLIDER REVOLUTION 5.x SCRIPTS  -->
-    <link rel="stylesheet" type="text/css" href="/js/plugins/revolution/css/settings.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="/js/plugins/revolution/css/layers.css">
-    <link rel="stylesheet" type="text/css" href="/js/plugins/revolution/css/navigation.css">
+<!--Template functions-->
+ <script src="js/functions.js"></script> 
 
-    <script type="text/javascript" src="/js/plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
-    <script type="text/javascript" src="/js/plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
-
-    <script type="text/javascript" src="/js/plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-    <script type="text/javascript" src="/js/plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-    <script type="text/javascript" src="/js/plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-    <script type="text/javascript" src="/js/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-    <script type="text/javascript" src="/js/plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-    <script type="text/javascript" src="/js/plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-    <script type="text/javascript" src="/js/plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-    <script type="text/javascript" src="/js/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-    <script type="text/javascript" src="/js/plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
-
-    <script type="text/javascript">
-        var tpj = jQuery;
-
-        var revapi30;
-        tpj(document).ready(function() {
-            if (tpj("#rev_slider_30_1").revolution == undefined) {
-                revslider_showDoubleJqueryError("#rev_slider_30_1");
-            } else {
-                revapi30 = tpj("#rev_slider_30_1").show().revolution({
-                    sliderType: "standard",
-                    jsFileLocation: "js/plugins/revolution/js/",
-                    sliderLayout: "fullscreen",
-                    dottedOverlay: "none",
-                    delay: 9000,
-                    navigation: {
-                        keyboardNavigation: "off",
-                        keyboard_direction: "horizontal",
-                        mouseScrollNavigation: "off",
-                        onHoverStop: "on",
-                        touch: {
-                            touchenabled: "on",
-                            swipe_threshold: 75,
-                            swipe_min_touches: 50,
-                            swipe_direction: "horizontal",
-                            drag_block_vertical: false
-                        },
-                        arrows: {
-                            style: "hermes",
-                            enable: true,
-                            hide_onmobile: true,
-                            hide_under: 600,
-                            hide_onleave: true,
-                            hide_delay: 200,
-                            hide_delay_mobile: 1200,
-                            tmp: '<div class="tp-arr-allwrapper">	<div class="tp-arr-imgholder"></div>	<div class="tp-arr-titleholder">{{title}}</div>	</div>',
-                            left: {
-                                h_align: "left",
-                                v_align: "center",
-                                h_offset: 0,
-                                v_offset: 0
-                            },
-                            right: {
-                                h_align: "right",
-                                v_align: "center",
-                                h_offset: 0,
-                                v_offset: 0
-                            }
-                        }
-                    },
-                    responsiveLevels: [1240, 1024, 778, 480],
-                    visibilityLevels: [1240, 1024, 778, 480],
-                    gridwidth: [1240, 1024, 778, 480],
-                    gridheight: [868, 768, 960, 720],
-                    lazyType: "smart",
-                    shadow: 0,
-                    spinner: "off",
-                    stopLoop: "off",
-                    stopAfterLoops: -1,
-                    stopAtSlide: -1,
-                    shuffle: "off",
-                    autoHeight: "off",
-                    fullScreenAutoWidth: "off",
-                    fullScreenAlignForce: "off",
-                    fullScreenOffsetContainer: "",
-                    fullScreenOffset: "",
-                    disableProgressBar: "on",
-                    hideThumbsOnMobile: "off",
-                    hideSliderAtLimit: 0,
-                    hideCaptionAtLimit: 0,
-                    hideAllCaptionAtLilmit: 0,
-                    debugMode: false,
-                    fallbacks: {
-                        simplifyAll: "off",
-                        nextSlideOnWindowFocus: "off",
-                        disableFocusListener: false,
-                    }
-                });
-            }
-        }); /*ready*/
-
-    </script>
 
 </body>
-
 </html>
