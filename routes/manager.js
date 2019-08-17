@@ -7,7 +7,7 @@ var eventModel = require('../model/event')
 var managerModel = require('../model/manager')
 
 
-const { check, validationResult } = require('express-validator');
+// const { check, validationResult } = require('express-validator');
 // // router.use(bodyParser.urlencoded());
 // .use(expressValidator());
 
@@ -31,7 +31,7 @@ router.post('/:id/courseList/register', function(req, res){
     info = [];
     info['fullName '] = req.fullName;
     info['course_id'] = req.courses_id;
-    info['courses_courseName'] = req.courseName; 
+    info['courses_courseName'] = req.courseName;
 
     Manager.register(info, function(err, manager){
         if(err) throw err;
