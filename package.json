@@ -14,7 +14,7 @@
     "@fullcalendar/interaction": "^4.0.0",
     "@fullcalendar/list": "^4.0.0",
     "@fullcalendar/timegrid": "^4.0.0",
-    "concurrently": "^4.1.1",
+    "concurrently": "^4.1.2",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ejs": "^2.6.2",
