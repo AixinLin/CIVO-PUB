@@ -7,8 +7,11 @@ var eventModel = require('../model/event')
 var managerModel = require('../model/manager')
 
 
-// const { check, validationResult } = require('express-validator');
+<<<<<<< HEAD
 //const { check, validationResult } = require('express-validator');
+=======
+// const { check, validationResult } = require('express-validator');
+>>>>>>> 3463e201101ff9d9f10556f1a0ccfc026b5e951d
 // // router.use(bodyParser.urlencoded());
 // .use(expressValidator());
 
