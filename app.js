@@ -9,6 +9,7 @@ var usersRouter = require('./routes/users');
 var coursesRouter = require('./routes/courses');
 var courseRouter = require('./routes/course');
 var eventRouter = require('./routes/event');
+var adminRouter = require('./routes/manager');
 
 var app = express();
 
@@ -30,10 +31,12 @@ app.use(require('express-formidable')({
 }))
 
 app.use('/', homeRouter);
-app.use('/users', usersRouter);
+app.use('/admin', adminRouter);
 app.use('/courses',coursesRouter);
-app.use('/course',courseRouter);
-app.use('/event',eventRouter);
+//app.use('/course',courseRouter);
+app.use('/events',eventRouter);
+
+
 
 
 // catch 404 and forward to error handler
