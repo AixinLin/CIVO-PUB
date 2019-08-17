@@ -14,7 +14,10 @@ module.exports = {
     },
     findUserById: function(userId){
         return user.userModel.find({_id:ObjectId(userId)});
-    }
+    },
+    findUserByEmailandPassword: function(email, password){
+        return user.userModel.findOne({email:email, password:password});
+    },
     
 }
 

@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongodb = require('./config/mongo');
+var session = require('express-session');
 var homeRouter = require('./routes/home');
 var usersRouter = require('./routes/users');
 var coursesRouter = require('./routes/courses');
@@ -15,6 +16,22 @@ var app = express();
 
 // view engine setup
 
+app.use(session({
+  cookie: { maxAge: 2628000000 },
+  // store: new (require('express-sessions'))({
+  //     url: "mongodb+srv://civo:<password>@cluster0-2uxls.mongodb.net/test?retryWrites=true&w=majority"
+  //     // instance: mongoose, // optional
+  //     // host: 'localhost', // optional
+  //     // port: 27017, // optional
+  //     // db: 'test', // optional
+  //     // collection: 'sessions', // optional
+  //     // expire: 86400 // optional
+  // }),
+   // 设置 cookie 中保存 session id 的字段名称
+  secret: "civo", // 通过设置 secret 来计算 hash 值并放在 cookie 中，使产生的 signedCookie 防篡改
+  resave: true, // 强制更新 session
+  saveUninitialized: false, // 设置为 false，强制创建一个 session，即使用户未登录
+}));
 
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
@@ -28,7 +45,8 @@ app.use(cookieParser());
 app.use(require('express-formidable')({
   uploadDir: path.join(__dirname, 'public/img'), // 上传文件目录
   keepExtensions: true// 保留后缀
-}))
+}));
+
 
 app.use('/', homeRouter);
 app.use('/admin', adminRouter);

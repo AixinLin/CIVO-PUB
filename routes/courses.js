@@ -8,11 +8,15 @@
 
 
 // module.exports = router;
+
+
 var express = require('express');
 var router = express.Router();
 var path = require('path');
 var courseModel = require('../model/course')
 var userModel = require('../model/user')
+const checkLogin = require('../middlewares/checkLogin').checkLogin
+const checkNotLogin = require('../middlewares/checkLogin').checkNotLogin
 const stringifyObject = require('stringify-object');
 
 // router.get('/', function(req, res, next) {
@@ -81,7 +85,7 @@ router.get('/test', function(req, res, next) {
 });
 
 //course schedule page
-router.get('/schedule', function(req, res, next) {
+router.get('/schedule', checkLogin, function(req, res, next) {
   //get current user here
   var userId = "5d4f0dbbcd9784e0d4613e1a";
 
