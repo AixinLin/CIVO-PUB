@@ -8,7 +8,6 @@ var managerModel = require('../model/manager')
 
 
 // const { check, validationResult } = require('express-validator');
-//const { check, validationResult } = require('express-validator');
 // // router.use(bodyParser.urlencoded());
 // .use(expressValidator());
 
