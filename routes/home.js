@@ -4,16 +4,19 @@ var userModel = require('../model/user')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render("index")
+  res.render("index");
 });
 
 router.get('/login', function(req, res, next) {
   res.render("login");
 });
 
-router.get('/login', (req, res) => {
-  res.render("manager/m_login");
-  res.status(200).end();
+router.get('/about', function(req, res, next) {
+  res.render("about");
+});
+
+router.get('/sponsors', function(req, res, next) {
+  res.render("sponsors");
 });
 
 

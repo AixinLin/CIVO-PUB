@@ -12,8 +12,8 @@ router.get('/', function(req, res, next) {
     var event = events[0];
     res.render("eventDetail",{"event":event});
   })
-  
 });
+
 
 router.post('/add', function(req, res, next) {
 

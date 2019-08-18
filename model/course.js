@@ -16,5 +16,6 @@ module.exports = {
     },
     findCourseById: function(courseId){
         return course.courseModel.find({_id:ObjectId(courseId)})
-    }
+    },
+    
 }
