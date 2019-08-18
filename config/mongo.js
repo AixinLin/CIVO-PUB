@@ -36,7 +36,8 @@ exports.eventModel = mongoose.model('event',new mongoose.Schema({
     email:String
   }],
   type: String,
-  date: Date
+  date: Date,
+  picture: String,
 }),'event');
 
 exports.courseModel = mongoose.model('course',new mongoose.Schema({

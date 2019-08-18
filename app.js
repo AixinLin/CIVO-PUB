@@ -10,7 +10,7 @@ var usersRouter = require('./routes/users');
 var coursesRouter = require('./routes/courses');
 var courseRouter = require('./routes/course');
 var eventRouter = require('./routes/event');
-var adminRouter = require('./routes/manager');
+var adminRouter = require('./routes/admin');
 
 var app = express();
 
@@ -43,16 +43,17 @@ app.use(logger('dev'));
 //app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(require('express-formidable')({
-  uploadDir: path.join(__dirname, 'public/img'), // 上传文件目录
+  uploadDir: path.join(__dirname, 'public/images'), // 上传文件目录
   keepExtensions: true// 保留后缀
 }));
 
 
 app.use('/', homeRouter);
-app.use('/admin', adminRouter);
+// app.use('/admin', adminRouter);
 app.use('/courses',coursesRouter);
 //app.use('/course',courseRouter);
 app.use('/events',eventRouter);
+app.use('/admin', adminRouter);
 
 
 
