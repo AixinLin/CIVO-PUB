@@ -11,12 +11,56 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/addCourse', function(req, res, next) {
-    res.render("forms");
+    res.render("adminAddCourse");
 });
 
 router.get('/addEvent', function(req, res, next) {
     res.render("adminAddEvent");
 });
+
+router.get('/manageEvents',function(req, res, next){
+    eventModel.getAllEvents().then((events, err) => {
+        if(err) {console.log(err);}
+        res.render("adminManageEvents", {"events":events});
+    })  
+})
+
+router.get('/manageUsers',function(req, res, next){
+    userModel.getAllUsers().then((users, err) => {
+        if(err) {console.log(err);}
+        res.render("adminManageUsers", {"users":users});
+    })  
+})
+
+router.get('/manageCourses',function(req, res, next){
+    courseModel.getAllCourses().then((courses, err) => {
+        if(err) {console.log(err);}
+        res.render("adminManageCourses", {"courses":courses});
+    })  
+})
+
+router.post('/manageEvents/:id/delete',function(req, res, next){
+    eventModel.deleteEvent(req.params.id).then((event, err) => {
+        if(err) {console.log(err);}
+        res.redirect("/admin/manageEvents");
+    })
+})
+
+router.post('/manageUsers/:id/delete',function(req, res, next){
+    userModel.deleteUser(req.params.id).then((event, err) => {
+        if(err) {console.log(err);}
+        res.redirect("/admin/manageUsers");
+    })
+})
+
+router.post('/manageCourses/:id/delete',function(req, res, next){
+    courseModel.deleteCourse(req.params.id).then((event, err) => {
+        if(err) {console.log(err);}
+        res.redirect("/admin/manageCourses");
+    })
+})
+
+
 
 router.post('/addEvent', function(req, res, next) {
     var name = req.fields.name;

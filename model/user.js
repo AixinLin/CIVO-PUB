@@ -18,6 +18,14 @@ module.exports = {
     findUserByEmailandPassword: function(email, password){
         return user.userModel.findOne({email:email, password:password});
     },
+    getAllUsers: function(){
+        return user.userModel.find({});
+    },
+    deleteUser: function(userId){
+        return user.userModel.deleteOne({
+            _id:ObjectId(userId)
+        })
+    }
     
 }
 

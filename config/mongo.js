@@ -44,6 +44,7 @@ exports.courseModel = mongoose.model('course',new mongoose.Schema({
   id: mongoose.Schema.Types.ObjectId,
   num_of_people: Number,
   name: String,
+  location: String,
   attendee: [{
     first_name:String,
     last_name: String,

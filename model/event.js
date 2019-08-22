@@ -8,6 +8,17 @@ module.exports = {
     },
 
     findEventById: function(eventId){
-        return event.eventModel.find({_id:ObjectId(eventId)})
+        return event.eventModel.find({_id:ObjectId(eventId)});
     },  
+
+    getAllEvents: function(){
+        return event.eventModel.find({});
+    },
+
+    deleteEvent: function(eventId){
+        return event.eventModel.deleteOne({
+            _id:ObjectId(eventId)
+        })
+    }
+
 }

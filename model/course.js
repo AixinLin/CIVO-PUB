@@ -15,7 +15,10 @@ module.exports = {
         return course.courseModel.findOneAndUpdate({_id:ObjectId(courseId)}, {$addToSet: {attendee:user}});
     },
     findCourseById: function(courseId){
-        return course.courseModel.find({_id:ObjectId(courseId)})
+        return course.courseModel.find({_id:ObjectId(courseId)});
     },
+    deleteCourse: function(courseId){
+        return course.courseModel.deleteOne({_id:ObjectId(courseId)});
+    }
     
 }
