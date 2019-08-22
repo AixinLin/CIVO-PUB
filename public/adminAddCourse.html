@@ -113,7 +113,7 @@
         <!-- end: Header -->
 
         <!-- Page title -->
-        <section id="page-title" data-parallax-image="images/parallax/5.jpg">
+        <section id="page-title" data-parallax-image="/images/parallax/5.jpg">
             <div class="container">
                 <div class="page-title">
                     <h1>Exec</h1>
@@ -125,228 +125,45 @@
         <!-- end: Page title -->
 
         <!-- Page Content -->
-        <section class="sidebar-right">
+        <section >
             <div class="container">
                 <div class="row">
-                    <div class="content col-lg-9">
+                    <div class="col-lg-7 center">
 
-                        <h3>Textual inputs</h3>
-                        <form>
-                            <div class="form-group row">
-                                <label for="example-text-input" class="col-2 col-form-label">Text</label>
-                                <div class="col-10">
-                                    <input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
+                        <h3>Add Course</h3>
+                        <form method="POST" enctype="multipart/form-data">
+                            <div class="form-group ">
+                                <label for="example-text-input">Name</label>
+                                <div>
+                                    <input name="name" class="form-control" type="text" value="" id="example-text-input">
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label for="example-search-input" class="col-2 col-form-label">Search</label>
-                                <div class="col-10">
-                                    <input class="form-control" type="search" value="How do I shoot web" id="example-search-input">
+                            <div class="form-group ">
+                                <label for="example-text-input" >Location</label>
+                                <div>
+                                    <input name="location" class="form-control" type="text" value="" id="example-text-input">
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label for="example-email-input" class="col-2 col-form-label">Email</label>
-                                <div class="col-10">
-                                    <input class="form-control" type="email" value="bootstrap@example.com" id="example-email-input">
+            
+                            
+                            <div class="form-group ">
+                                <label for="example-datetime-local-input" >Start Time</label>
+                                <div >
+                                    <input name="date" class="form-control" type="datetime-local" id="example-datetime-local-input">
                                 </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="example-url-input" class="col-2 col-form-label">URL</label>
-                                <div class="col-10">
-                                    <input class="form-control" type="url" value="https://getbootstrap.com" id="example-url-input">
+                            </div> 
+                            <div class="form-group ">
+                                <label for="example-datetime-local-input" >End Time</label>
+                                <div >
+                                    <input name="date" class="form-control" type="datetime-local" id="example-datetime-local-input">
                                 </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="example-tel-input" class="col-2 col-form-label">Telephone</label>
-                                <div class="col-10">
-                                    <input class="form-control" type="tel" value="1-(555)-555-5555" id="example-tel-input">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="example-password-input" class="col-2 col-form-label">Password</label>
-                                <div class="col-10">
-                                    <input class="form-control" type="password" value="hunter2" id="example-password-input">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="example-number-input" class="col-2 col-form-label">Number</label>
-                                <div class="col-10">
-                                    <input class="form-control" type="number" value="42" id="example-number-input">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="example-datetime-local-input" class="col-2 col-form-label">Date and time</label>
-                                <div class="col-10">
-                                    <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="example-date-input" class="col-2 col-form-label">Date</label>
-                                <div class="col-10">
-                                    <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="example-month-input" class="col-2 col-form-label">Month</label>
-                                <div class="col-10">
-                                    <input class="form-control" type="month" value="2011-08" id="example-month-input">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="example-week-input" class="col-2 col-form-label">Week</label>
-                                <div class="col-10">
-                                    <input class="form-control" type="week" value="2011-W33" id="example-week-input">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="example-time-input" class="col-2 col-form-label">Time</label>
-                                <div class="col-10">
-                                    <input class="form-control" type="time" value="13:45:00" id="example-time-input">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="example-color-input" class="col-2 col-form-label">Color</label>
-                                <div class="col-10">
-                                    <input class="form-control" type="color" value="#563d7c" id="example-color-input">
-                                </div>
-                            </div>
+                            </div>                   
+                    
+                            <button type="submit" class="btn">Submit</button>
+                            
                         </form>
-
-
-
-                    </div>
-                    <!-- Sidebar-->
-                    <div class="sidebar sidebar-modern col-lg-3">
-
-                        <!--widget newsletter-->
-                        <div class="widget  widget-newsletter">
-
-                            <form id="widget-search-form-sidebar" action="search-results-page.html" method="get" class="form-inline">
-                                <div class="input-group">
-                                    <input type="text" aria-required="true" name="q" class="form-control widget-search-form" placeholder="Search for pages...">
-                                     <div class="input-group-append">
-    <span class="input-group-btn">
-                  <button type="submit" id="widget-widget-search-form-button" class="btn"><i class="fa fa-search"></i></button>
-                  </span>
-  </div> </div>
-                            </form>
-                        </div>
-                        <!--end: widget newsletter-->
-
-                        <!--Tabs with Posts-->
-                        <div class="widget">                         <div class="tabs">
-                                <ul class="nav nav-tabs" id="tabs-posts" role="tablist">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#popular" role="tab" aria-controls="popular" aria-selected="true">Popular</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#featured" role="tab" aria-controls="featured" aria-selected="false">Featured</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#recent" role="tab" aria-controls="recent" aria-selected="false">Recent</a>
-                                    </li>
-                                </ul>
-                                <div class="tab-content" id="tabs-posts-content">
-                                    <div class="tab-pane fade show active" id="popular" role="tabpanel" aria-labelledby="popular-tab">
-                                        <div class="post-thumbnail-list">
-                                            <div class="post-thumbnail-entry">
-                                                <img alt="" src="images/blog/thumbnail/5.jpg">
-                                                <div class="post-thumbnail-content">
-                                                    <a href="#">Suspendisse consectetur fringilla luctus</a>
-                                                    <span class="post-date"><i class="far fa-clock"></i> 6m ago</span>
-                                                    <span class="post-category"><i class="fa fa-tag"></i> Technology</span>
-                                                </div>
-                                            </div>
-                                            <div class="post-thumbnail-entry">
-                                                <img alt="" src="images/blog/thumbnail/6.jpg">
-                                                <div class="post-thumbnail-content">
-                                                    <a href="#">Consectetur adipiscing elit</a>
-                                                    <span class="post-date"><i class="far fa-clock"></i> 24h ago</span>
-                                                    <span class="post-category"><i class="fa fa-tag"></i> Lifestyle</span>
-                                                </div>
-                                            </div>
-                                            <div class="post-thumbnail-entry">
-                                                <img alt="" src="images/blog/thumbnail/7.jpg">
-                                                <div class="post-thumbnail-content">
-                                                    <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
-                                                    <span class="post-date"><i class="far fa-clock"></i> 11h ago</span>
-                                                    <span class="post-category"><i class="fa fa-tag"></i> Lifestyle</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="featured" role="tabpanel" aria-labelledby="featured-tab">
-                                        <div class="post-thumbnail-list">
-                                            <div class="post-thumbnail-entry">
-                                                <img alt="" src="images/blog/thumbnail/6.jpg">
-                                                <div class="post-thumbnail-content">
-                                                    <a href="#">Consectetur adipiscing elit</a>
-                                                    <span class="post-date"><i class="far fa-clock"></i> 24h ago</span>
-                                                    <span class="post-category"><i class="fa fa-tag"></i> Lifestyle</span>
-                                                </div>
-                                            </div>
-                                            <div class="post-thumbnail-entry">
-                                                <img alt="" src="images/blog/thumbnail/7.jpg">
-                                                <div class="post-thumbnail-content">
-                                                    <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
-                                                    <span class="post-date"><i class="far fa-clock"></i> 11h ago</span>
-                                                    <span class="post-category"><i class="fa fa-tag"></i> Lifestyle</span>
-                                                </div>
-                                            </div>
-                                            <div class="post-thumbnail-entry">
-                                                <img alt="" src="images/blog/thumbnail/8.jpg">
-                                                <div class="post-thumbnail-content">
-                                                    <a href="#">Fringilla luctus Lorem ipsum dolor sit amet</a>
-                                                    <span class="post-date"><i class="far fa-clock"></i> 11h ago</span>
-                                                    <span class="post-category"><i class="fa fa-tag"></i> Lifestyle</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="recent" role="tabpanel" aria-labelledby="recent-tab">
-                                        <div class="post-thumbnail-list">
-                                            <div class="post-thumbnail-entry">
-                                                <img alt="" src="images/blog/thumbnail/7.jpg">
-                                                <div class="post-thumbnail-content">
-                                                    <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
-                                                    <span class="post-date"><i class="far fa-clock"></i> 11h ago</span>
-                                                    <span class="post-category"><i class="fa fa-tag"></i> Lifestyle</span>
-                                                </div>
-                                            </div>
-                                            <div class="post-thumbnail-entry">
-                                                <img alt="" src="images/blog/thumbnail/8.jpg">
-                                                <div class="post-thumbnail-content">
-                                                    <a href="#">Fringilla luctus Lorem ipsum dolor sit amet</a>
-                                                    <span class="post-date"><i class="far fa-clock"></i> 11h ago</span>
-                                                    <span class="post-category"><i class="fa fa-tag"></i> Lifestyle</span>
-                                                </div>
-                                            </div>
-                                            <div class="post-thumbnail-entry">
-                                                <img alt="" src="images/blog/thumbnail/6.jpg">
-                                                <div class="post-thumbnail-content">
-                                                    <a href="#">Consectetur adipiscing elit</a>
-                                                    <span class="post-date"><i class="far fa-clock"></i> 24h ago</span>
-                                                    <span class="post-category"><i class="fa fa-tag"></i> Lifestyle</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End: Tabs with Posts-->
-
-                        <!-- Twitter widget -->
-                        <div class="widget widget-tweeter" data-username="envato" data-limit="2">
-                            <h4 class="widget-title">Recent Tweets</h4>
-                        </div>
-                        <!-- end: Twitter widget-->
-
-
-
-                    </div>
-                    <!-- end: sidebar-->
-                </div>
+                        
+                    </div>         
             </div>
         </section>
         <!-- end: Page Content -->
@@ -359,7 +176,7 @@
                     <div class="row">
                         <div class="col-lg-4">
                             <!-- Footer widget area 1 -->
-                            <div class="widget  widget-contact-us" style="background-image: url('images/world-map-dark.png'); background-position: 50% 20px; background-repeat: no-repeat">
+                            <div class="widget  widget-contact-us" style="background-image: url('/images/world-map-dark.png'); background-position: 50% 20px; background-repeat: no-repeat">
                                 <h4>About CIVO</h4>
                                 <ul class="list-icon">
                                     <li><i class="fa fa-map-marker-alt"></i> 795 Folsom Ave, Suite 600 <br> San Francisco, CA 94107</li>
@@ -448,11 +265,11 @@
     <a id="goToTop"><i class="fa fa-angle-up top-icon"></i><i class="fa fa-angle-up"></i></a>
 
     <!--Plugins-->
-    <script src="js/jquery.js"></script>
-    <script src="js/plugins.js"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/plugins.js"></script>
 
     <!--Template functions-->
-    <script src="js/functions.js"></script>
+    <script src="/js/functions.js"></script>
 </body>
 
 </html>
