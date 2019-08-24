@@ -8,8 +8,7 @@ var session = require('express-session');
 var homeRouter = require('./routes/home');
 var usersRouter = require('./routes/users');
 var coursesRouter = require('./routes/courses');
-var courseRouter = require('./routes/course');
-var eventRouter = require('./routes/event');
+var eventRouter = require('./routes/events');
 var adminRouter = require('./routes/admin');
 
 var app = express();

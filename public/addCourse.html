@@ -852,7 +852,7 @@
                                     <option selected="">Choose...</option>
                                     <% courses.forEach((course, i) => {
                                         %>
-                                            <option value="<%= course.start_time %>"><%= course.name %></option>
+                                            <option id="<%= course.start_time %>"><%= course.name %></option>
                                         <%
                                     }) %> 
                                 </select>
@@ -861,7 +861,7 @@
                         <script>
                             function changeSelect(){
                                 var courseSelected = document.getElementById("inputCourseName");
-                                courseSelected = courseSelected.options[courseSelected.selectedIndex].value;
+                                courseSelected = courseSelected.options[courseSelected.selectedIndex].id;
                                 console.log(courseSelected);
                                 var timeSelected = document.getElementById("inputCourseTime");
                                 timeSelected.options[0].text = courseSelected;

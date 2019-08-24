@@ -10,10 +10,11 @@ db.once('open', function() {
 });
 
 exports.userModel = mongoose.model('user',new mongoose.Schema({
-  id: mongoose.Schema.Types.ObjectId,
+  id: { type: mongoose.Schema.Types.ObjectId, unique: true },
   first_name: String,
   last_name: String,
   courses: [{
+    id: { type: mongoose.Schema.Types.ObjectId, unique: true, index: true},
     name: String,
     num_of_people: Number,
     start_time: Date,

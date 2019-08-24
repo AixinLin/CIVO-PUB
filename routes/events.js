@@ -6,11 +6,10 @@ var userModel = require('../model/user')
 var eventModel = require('../model/event')
 
 router.get('/', function(req, res, next) {
-  var eventid = "5d51ca1e4e73a615759129d1";
-  eventModel.findEventById(eventid).then(function(events,err){
-    if(err) {}
-    var event = events[0];
-    res.render("eventDetail",{"event":event});
+  
+  eventModel.getAllEvents().then((events,err) => {
+    if(err) {console.log(err);}
+    res.render("events",{"events":events});
   })
 });
 
@@ -30,9 +29,14 @@ router.post('/add', function(req, res, next) {
   res.redirect("/event");
 });
 
-// router.get('/:id', function(req, res, next) {
-//   res.render("test",{"title":"Course"});
-// });
+router.get('/:id', function(req, res, next) {
+  var eventid = req.params.id;
+  eventModel.findEventById(eventid).then(function(events,err){
+    if(err) {}
+    var event = events[0];
+    res.render("eventDetail",{"event":event});
+  })
+});
 
 
 

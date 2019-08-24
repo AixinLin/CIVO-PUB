@@ -1,15 +1,3 @@
-// var express = require('express');
-// var router = express.Router();
-// var path = require('path');
-
-// router.get('/', function(req, res, next) {
-//   res.render(path.join(__dirname, '../public', 'courses.html'))
-// });
-
-
-// module.exports = router;
-
-
 var express = require('express');
 var router = express.Router();
 var path = require('path');
@@ -23,7 +11,7 @@ const stringifyObject = require('stringify-object');
 //   res.render(path.join(__dirname, '../public', 'course.html'), {title:"abcdefg"})
 // });
 
-router.get('/edit', function(req, res, next) {
+router.get('/edit',function(req, res, next) {
   res.render("forms", {"title":"courseEdit"});
 });
 
@@ -33,37 +21,30 @@ router.post('/add', function(req, res, next) {
   var courseName = req.fields.courseName;
   var courseTime = req.fields.courseTime;
 
-  // let course = {
-  //   name: "database",
-  //   num_of_people:0,
-  //   start_time: new Date('2019-08-08T03:24:00'),
-  //   end_time: new Date('2019-08-09T03:24:00'),
-  // } 
-
-  // let user = {
-  //   first_name: "Yijun",
-  //   last_name: "He",
-  // }
-
   //find course based on the course and time
   courseModel.findCourseByNameTime(courseName).then(function(course,err){
     if(err) {console.log(err)}
-
     //update the number of people
-    course[0].num_of_people = course[0].num_of_people + 1;
-    var userId = "5d4f0dbbcd9784e0d4613e1a";
-    
+    var userId = req.session.user._id;
+    var newCourse = {
+      _id: course._id,
+      name: course.name,
+      location: course.location,
+      attendee: course.attendee,
+      start_time: course.start_time,
+      end_time: course.end_time,
+    }
+    course = newCourse;
+    console.log(course);
     //add course to the current user with course and current user id
-    var newCourse = course[0];
-    userModel.addCourse(newCourse,userId).then(function(user,err){
+    userModel.addCourse(course,userId).then(function(user,err){
       if(err) {console.log(err);}
-      console.log(user);
-      
       //update course object as well
-      var courseId = newCourse._id;
-      courseModel.updateAttendee(courseId, user).then(function(doc, err){
+      courseModel.updateAttendee(course._id, user).then(function(doc, err){
         if(err) {console.log(err);}
-        console.log(doc);
+        courseModel.updateNumOfPeople(course._id, userId);
+        //userModel.updateNumOfPeople(userId,course._id);
+        res.redirect("/courses/schedule");
       });
     }); 
   })
@@ -85,24 +66,26 @@ router.get('/test', function(req, res, next) {
 });
 
 //course schedule page
-router.get('/schedule', checkLogin, function(req, res, next) {
+router.get('/schedule', function(req, res, next) {
   //get current user here
-  var userId = "5d4f0dbbcd9784e0d4613e1a";
+  var userId = "5d58735854bdd7c92ed3e5ce";
 
   //find the current user and get the info and pass the user info in schedule
-  userModel.findUserById(userId).then(function(user,err){
-    if(err){}
-    var newUser = user[0].courses.map(function(obj){
+  
+  userModel.getNumOfPeople(userId).then((result,err)=>{
+    
+    var newUser = result.map(function(obj){
+      var eachCourse = obj.coursesObjects[0];
       return {
-        "id": obj._id,
-        "title": obj.name + "\n" + "People: " + obj.num_of_people,
-       //"num_of_people":  obj.num_of_people,
-        "start":   obj.start_time,
-        "end":  obj.end_time,
+        "id": eachCourse._id,
+        "title": eachCourse.name + "\n" + "People: " + eachCourse.num_of_people,
+        //"num_of_people":  obj.num_of_people,
+        "start":   eachCourse.start_time,
+        "end":  eachCourse.end_time,
       }
     });
-    res.render("schedule", {"users": JSON.stringify(newUser)});
-  })
+    res.render("schedule", {"users": JSON.stringify(newUser)});   
+  });
 });
 
 router.get('/', function(req, res, next) {

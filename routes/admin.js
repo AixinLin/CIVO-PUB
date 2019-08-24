@@ -14,6 +14,24 @@ router.get('/addCourse', function(req, res, next) {
     res.render("adminAddCourse");
 });
 
+router.post('/addCourse', function(req, res, next) {
+    var name = req.fields.name;
+    var location = req.fields.location;
+    var start_time = req.fields.start_time;
+    var end_time = req.fields.end_time;
+    var course = {
+        name: name,
+        location: location,
+        start_time: start_time,
+        end_time: end_time,
+        num_of_people: 0,
+    }
+    courseModel.create(course).then((course,err) => {
+        if(err){console.log(err);}
+        res.redirect("/admin/manageCourses");
+    })
+    //res.render("adminAddCourse");
+});
 router.get('/addEvent', function(req, res, next) {
     res.render("adminAddEvent");
 });

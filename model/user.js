@@ -25,6 +25,19 @@ module.exports = {
         return user.userModel.deleteOne({
             _id:ObjectId(userId)
         })
+    },
+    getNumOfPeople: function(userId){
+        return user.userModel.aggregate([
+            //{"$match" : {"_id": {$eq: ObjectId(userId)}}},
+            { "$unwind": "$courses" },
+            { "$lookup": {
+                "from": "course",
+                "localField": "courses._id",
+                "foreignField": "_id",
+                "as": "coursesObjects"
+             }},
+             {"$match" : {_id: ObjectId(userId)}}
+        ]);
     }
     
 }
