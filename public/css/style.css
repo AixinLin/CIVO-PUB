@@ -282,6 +282,9 @@ section {
   #content .container-fluid {
     position: relative; }
 
+
+
+
 .content {
   padding-left: 25px;
   margin-bottom: 26px; }
@@ -2389,11 +2392,11 @@ Side Push Panel
       width: 300px;
       left: 0;
       right: auto;
-      /*#mainMenu nav > ul li { 
+      /*#mainMenu nav > ul li {
                  opacity: 0;
              }
              #mainMenu nav > ul > li > a > i {
-                 opacity: 1 
+                 opacity: 1
              }*/ }
     .side-panel.side-panel-active.side-panel-admin #wrapper {
       padding-left: 300px;
@@ -5502,29 +5505,29 @@ h6.font-parisienne {
             margin: 0;
             padding: 0;
         }
-        
+
         .twitter-widget li {
             list-style: none;
             clear: both;
         }
-        
+
         .twitter-widget li img,
         .twitter-widget li .tweets_txt {
             float: left;
             margin-bottom: 10px;
         }
-        
+
         .twitter-widget li img {
             -webkit-border-radius: 30px;
             -moz-border-radius: 30px;
             border-radius: 30px;
         }
-        
+
         .twitter-widget li .tweets_txt {
             width: 350px;
             margin-left: 10px;
         }
-        
+
         .twitter-widget li .tweets_txt span {
             font-style: italic;
             color: #666;
@@ -6536,9 +6539,9 @@ body.device-xxs .text-medium-light {
   #footer.background-grey .footer-logo {
     border-right: 1px solid #ccc; }
 
-/*  
+/*
 .copyright-content {
-   
+
 .copyright-links a {
     padding: 10px;
 }
@@ -6703,9 +6706,9 @@ body.device-xxs .text-medium-light {
     color: #fff; }
 
 /*.widget-tags .tags a {
-    
-   
-    
+
+
+
     font-size: 11px;
     letter-spacing: 1px;
 
@@ -9909,12 +9912,12 @@ h5.card-title {
 	&.title-center:after {
 		margin: 30px auto 0;
 	}
-    
-    
 
-    
-    
-    
+
+
+
+
+
 }*/
 .heading.heading-light,
 .text-light .heading,
@@ -12543,7 +12546,7 @@ img.mfp-img {
     border-top-right-radius: 20px;
     margin-right: 0;
 }
-// pagination rounded style 
+// pagination rounded style
 .pagination {
     .pagination-rounded {
         > li > a,
@@ -13666,9 +13669,9 @@ section[data-parallax-image] {
   background-color: transparent; }
 
 /*  Components */
-/*.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-success, 
+/*.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-success,
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-success {
-    
+
     color: #fff;
     background: #5cb85c;
 }*/
