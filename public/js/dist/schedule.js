@@ -14356,7 +14356,8 @@ document.addEventListener('DOMContentLoaded', function() {
     navLinks: true, // can click day/week names to navigate views
     editable: true,
     eventLimit: true, // allow "more" link when too many events
-    events:obj
+    events:obj,
+    
     //  [
     //   {
     //     //to pass the data, pass from the html, html from router

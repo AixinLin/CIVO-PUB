@@ -22,23 +22,26 @@ router.post('/add', function(req, res, next) {
   var courseTime = req.fields.courseTime;
 
   //find course based on the course and time
-  courseModel.findCourseByNameTime(courseName).then(function(course,err){
+  courseModel.findCourseByName(courseName).then(function(course,err){
     if(err) {console.log(err)}
     //update the number of people
-    var userId = req.session.user._id;
+    //var userId = req.session.user._id;
+    console.log(course);
     var newCourse = {
       _id: course._id,
       name: course.name,
       location: course.location,
       attendee: course.attendee,
-      start_time: course.start_time,
-      end_time: course.end_time,
+      date: course.date
     }
     course = newCourse;
-    console.log(course);
+    
+    //console.log(course);
     //add course to the current user with course and current user id
+    userId = "5d6acc7d2d58c30ec9bf9a34";
     userModel.addCourse(course,userId).then(function(user,err){
       if(err) {console.log(err);}
+      console.log(user);
       //update course object as well
       courseModel.updateAttendee(course._id, user).then(function(doc, err){
         if(err) {console.log(err);}
@@ -68,22 +71,26 @@ router.get('/test', function(req, res, next) {
 //course schedule page
 router.get('/schedule', function(req, res, next) {
   //get current user here
-  var userId = "5d58735854bdd7c92ed3e5ce";
+  var userId = "5d6acc7d2d58c30ec9bf9a34";
 
   //find the current user and get the info and pass the user info in schedule
   
   userModel.getNumOfPeople(userId).then((result,err)=>{
-    
-    var newUser = result.map(function(obj){
+    var newUser =  [];
+    result.forEach(function(obj){
       var eachCourse = obj.coursesObjects[0];
-      return {
-        "id": eachCourse._id,
-        "title": eachCourse.name + "\n" + "People: " + eachCourse.num_of_people,
-        //"num_of_people":  obj.num_of_people,
-        "start":   eachCourse.start_time,
-        "end":  eachCourse.end_time,
-      }
+      eachCourse.date.forEach(date => {  
+        newUser.push({
+          "id": eachCourse._id,
+          "title": eachCourse.name + "\n" + "People: " + eachCourse.num_of_people,
+          "startTime": date.start_time.getHours() + ":" + date.start_time.getMinutes(),
+          "endTime":date.end_time.getHours() + ":" + date.end_time.getMinutes(),
+          startRecur: date.start_time,
+          daysOfWeek:[date.start_time.getDay()]
+        });
+      });
     });
+    //console.log(newUser);
     res.render("schedule", {"users": JSON.stringify(newUser)});   
   });
 });

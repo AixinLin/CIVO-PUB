@@ -17,8 +17,10 @@ exports.userModel = mongoose.model('user',new mongoose.Schema({
     id: { type: mongoose.Schema.Types.ObjectId, unique: true, index: true},
     name: String,
     num_of_people: Number,
-    start_time: Date,
-    end_time: Date,
+    date:[{
+      start_time: Date,
+      end_time: Date,
+    }]
   }],
   events: String,
   gender: String,
@@ -51,8 +53,11 @@ exports.courseModel = mongoose.model('course',new mongoose.Schema({
     last_name: String,
     email:String
   }],
-  start_time: Date,
-  end_time: Date,
+  date:[{
+    start_time: Date,
+    end_time: Date,
+  }]
+ 
 }),'course');
 
 

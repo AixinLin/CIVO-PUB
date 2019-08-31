@@ -53,8 +53,11 @@
                                         <%if (user) { %>
                                             <li><a href="/courses/schedule">courses</a></li>
                                         <%}%>
-                                        <li><a href="/login">Login</a></li>
-
+                                        <%if (user) { %>
+                                            <li><a href="/logout">logout</a></li> 
+                                        <% } else { %>
+                                            <li><a href="/login">Login</a></li>      
+                                        <% } %>
                                     </ul>
                                 </nav>
                             </div>

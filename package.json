@@ -13,6 +13,7 @@
     "@fullcalendar/daygrid": "^4.2.0",
     "@fullcalendar/interaction": "^4.0.0",
     "@fullcalendar/list": "^4.0.0",
+    "@fullcalendar/rrule": "^4.3.0",
     "@fullcalendar/timegrid": "^4.0.0",
     "concurrently": "^4.1.2",
     "cookie-parser": "~1.4.4",
@@ -30,6 +31,7 @@
     "morgan": "~1.9.1",
     "popper.js": "^1.15.0",
     "request": "^2.79.0",
+    "rrule": "^2.6.2",
     "stringify-object": "^3.3.0"
   },
   "devDependencies": {

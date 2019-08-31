@@ -852,13 +852,13 @@
                                     <option selected="">Choose...</option>
                                     <% courses.forEach((course, i) => {
                                         %>
-                                            <option id="<%= course.start_time %>"><%= course.name %></option>
+                                            <option><%= course.name %></option>
                                         <%
                                     }) %> 
                                 </select>
                         </div>
 
-                        <script>
+                        <!-- <script>
                             function changeSelect(){
                                 var courseSelected = document.getElementById("inputCourseName");
                                 courseSelected = courseSelected.options[courseSelected.selectedIndex].id;
@@ -866,15 +866,15 @@
                                 var timeSelected = document.getElementById("inputCourseTime");
                                 timeSelected.options[0].text = courseSelected;
                             }
-                        </script>
+                        </script> -->
                        
                        
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label for="inputState">Time</label>
                             <select id="inputCourseTime" class="form-control" name="courseTime">
                                 <option selected="">Choose...</option>
                             </select>
-                        </div>
+                        </div> -->
                        
                         <button type="submit" class="btn">Add Course</button>
                     </form>

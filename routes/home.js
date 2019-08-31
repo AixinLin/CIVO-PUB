@@ -4,7 +4,8 @@ var userModel = require('../model/user')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render("index",{"user":req.session.user});
+  console.log(req.session.user);
+  res.render("index", {"user":req.session.user});
 });
 
 router.get('/login', function(req, res, next) {
@@ -56,6 +57,7 @@ router.post('/register', function(req, res, next) {
   userModel.create(user).then(function(result,err){
     if(err) {console.log(err);}
     console.log(result);
+    req.session.user = result;
     res.redirect('/');
   })
   

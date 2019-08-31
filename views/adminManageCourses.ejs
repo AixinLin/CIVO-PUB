@@ -134,8 +134,8 @@
                                     <th>Name</th>
                                     <th>Location</th>
                                     <th>Number of People</th>
-                                    <th>Start Time</th>
-                                    <th>End Time</th>    
+                                    <th>Date</th>
+                    
                                 </tr>
                             </thead>
                             <tbody>
@@ -144,8 +144,7 @@
                                     <td><a href=""><%=course.name%></a ></td>
                                     <td><%=course.location%></td>
                                     <td><%=course.num_of_people%></td>
-                                    <td><%=course.start_time%></td>
-                                    <td><%=course.end_time%></td>
+                                    <td><%=course.date%></td>
                                    
                                     <td>
                                         <form method="post" action="/admin/manageCourses/<%=course._id%>/delete">

@@ -9,8 +9,11 @@ module.exports = {
     getAllCourses: function(){
         return course.courseModel.find({});
     },
-    findCourseByNameTime: function(courseName, courseTime){
+    findCourseByName: function(courseName){
         return course.courseModel.findOne({name: courseName});
+    },
+    updateCourseTime: function(courseId,updatedDate){
+        return course.courseModel.findOneAndUpdate({_id:ObjectId(courseId)}, {$addToSet: {date:updatedDate}})
     },
     updateAttendee: function(courseId, user){
         
