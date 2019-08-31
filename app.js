@@ -32,10 +32,10 @@ app.use(session({
   saveUninitialized: false, // 设置为 false，强制创建一个 session，即使用户未登录
 }));
 
-app.engine('html', require('ejs').renderFile);
-app.set('view engine', 'html');
-//app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'public'));
+//app.engine('html', require('ejs').renderFile);
+//app.set('view engine', 'html');
+app.set('view engine', 'ejs');
+//app.set('views', path.join(__dirname, 'public'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(logger('dev'));
 //app.use(express.json()).use(express.urlencoded());

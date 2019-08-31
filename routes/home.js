@@ -4,7 +4,7 @@ var userModel = require('../model/user')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render("index");
+  res.render("index",{"user":req.session.user});
 });
 
 router.get('/login', function(req, res, next) {

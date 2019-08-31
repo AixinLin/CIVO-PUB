@@ -50,8 +50,10 @@
                                         <li><a href="/events">Events</a></li>
                                         <li><a href="#sponsor">Sponsors</a></li>
                                         <li><a href="/contacts">Contact</a></li>
-                                        <li><a href="/courses/schedule">Courses</a></li>
-                                        <li><a href="index">Login</a></li>
+                                        <!-- <%if (user) { %> -->
+                                            <li><a href="/courses/schedule"><%= user %></a></li>
+                                        <!-- <%}%> -->
+                                        <li><a href="/login">Login</a></li>
 
                                     </ul>
                                 </nav>
@@ -876,7 +878,9 @@ To become a sponsor of Chinese International Volunteer Organization, please emai
                                     <li><a href="/events">Events</a></li>
                                     <li><a href="#sponsor">Sponsors</a></li>
                                     <li><a href="/contacts">Contact</a></li>
-                                    <li><a href="/courses/schedule">Courses</a></li>
+                                    <%if (user) { %>
+                                    <li><a href="/courses/schedule"><%=user%></a></li>
+                                    <%}%>
                                     <li><a href="index">Login</a></li>
                                 </ul>
                             </div>
