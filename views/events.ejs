@@ -1,101 +1,5 @@
 <!DOCTYPE html>
 <%include ../views/header %>
-
-<body>
-
-
-    <!-- Wrapper -->
-    <div id="wrapper">
-
-        <!-- Header -->
-        <header id="header" class="header-transparent dark">
-            <div id="header-wrap">
-                <div class="container">
-                    <!--Logo-->
-                    <div id="logo">
-                        <a href="index.html" class="logo" data-dark-logo="/images/logo-dark.png">
-                            <img src="/images/logo.png" alt="Polo Logo">
-                        </a>
-                    </div>
-                    <!--End: Logo-->
-
-                    <!--Top Search Form-->
-                    <div id="top-search">
-                        <form action="search-results-page.html" method="get">
-                            <input type="text" name="q" class="form-control" value="" placeholder="Start typing & press  &quot;Enter&quot;">
-                        </form>
-                    </div>
-                    <!--end: Top Search Form-->
-
-                    <!--Header Extras-->
-                    <div class="header-extras">
-                        <ul>
-                            <li>
-                                <!--top search-->
-                                <a id="top-search-trigger" href="#" class="toggle-item">
-                                    <i class="fa fa-search"></i>
-                                    <i class="fa fa-times"></i>
-                                </a>
-                                <!--end: top search-->
-                            </li>
-                            <li class="d-none d-sm-block">
-                                <!--shopping cart-->
-                                <div id="shopping-cart">
-                                    <a href="shop-cart.html">
-                                        <span class="shopping-cart-items">8</span>
-
-                                        <i class="fa fa-shopping-cart"></i></a>
-                                </div>
-                                <!--end: shopping cart-->
-                            </li>
-                            <li>
-                                <div class="topbar-dropdown">
-                                    <a class="title"><i class="fas fa-globe-americas"></i></a>
-                                    <div class="dropdown-list">
-                                        <a class="list-entry" href="#">French</a>
-                                        <a class="list-entry" href="#">Spanish</a>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <!--end: Header Extras-->
-
-                    <!--Navigation Resposnive Trigger-->
-                    <div id="mainMenu-trigger">
-                        <button class="lines-button x"> <span class="lines"></span> </button>
-                    </div>
-                    <!--end: Navigation Resposnive Trigger-->
-
-                    <!--Navigation-->
-                    <div id="mainMenu" class="light">
-                            <div class="container">
-                                <nav>
-                                    <ul>
-                                        <li><a href="/">Home</a></li>
-                                        <li><a href="events.html">Events</a></li>
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="sponsors.html">Sponsors</a></li>
-                                        <li><a href="index.html">Contact</a></li>
-                                        <li><a href="/courses/schedule">Courses</a></li>
-                                        <li><a href="index.html">Login</a></li>
-
-                                        <!-- <li dclass="dropdown"> <a href="#">Member</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="/users/"><i class="fa fa-heart"></i>Login</a></li>
-                                                <li><a href="#"><i class="fa fa-heart"></i>Signout</a></li>
-
-                                            </ul>
-                                        </li> -->
-
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                        <!--end: Navigation-->
-                </div>
-            </div>
-        </header>
         <!-- end: Header -->
 
 
@@ -108,9 +12,9 @@
                 </div>
                 <div class="breadcrumb">
                     <ul>
-                        <li><a href="#">Home</a> </li>
-                        <li><a href="#">Shortcodes</a> </li>
-                        <li class="active"><a href="#">Cards</a> </li>
+                        <li><a href="#">Home</a > </li>
+                        <li><a href="#">Shortcodes</a > </li>
+                        <li class="active"><a href="#">Cards</a > </li>
                     </ul>
                 </div>
             </div>
@@ -126,9 +30,9 @@
                                 <img class="card-img-top" src="../images/<%= event.picture %>" alt="Card image cap">
                                 <div class="card-body">
                                     <h5 class="card-title"><%= event.name %></h5>
-                                    <p class="card-text"><%= event.location %></p>
-                                    <p class="card-text"><%= event.description %></p>
-                                    <a href="/events/<%= event._id %>" class="btn btn-primary">Details</a>
+                                    <p class="card-text"><%= event.location %></p >
+                                    <p class="card-text"><%= event.description %></p >
+                                    <a href="/events/<%= event._id %>" class="btn btn-primary">Details</a >
                                 </div>
                             </div>
                         </div>
@@ -146,7 +50,7 @@
     <!-- end: Wrapper -->
 
     <!-- Go to top button -->
-    <a id="goToTop"><i class="fa fa-angle-up top-icon"></i><i class="fa fa-angle-up"></i></a>
+    <a id="goToTop"><i class="fa fa-angle-up top-icon"></i><i class="fa fa-angle-up"></i></a >
 
     <!--Plugins-->
     <script src="js/jquery.js"></script>
