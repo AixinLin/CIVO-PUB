@@ -46,6 +46,10 @@ app.use(require('express-formidable')({
   keepExtensions: true// 保留后缀
 }));
 
+app.use(function(req, res, next) {
+  res.locals.user = req.session.user
+  next();
+});
 
 app.use('/', homeRouter);
 // app.use('/admin', adminRouter);

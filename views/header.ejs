@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <!-- Document title -->
+    <title>CIVO | Chinese International Volunteer Organization</title>
+    <!-- Stylesheets & Fonts -->
+    <!--FONT LINK--><link href="/css/plugins.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/responsive.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header" class="header-transparent dark">
+            <div id="header-wrap">
+                <div class="container">
+                    <!--Logo-->
+                    <div id="logo">
+                        <a href="index.html" class="logo" data-dark-logo="/images/logo-dark.png">
+                            <img src="/images/logo.png" alt="Polo Logo">
+                        </a>
+                    </div>
+                    <!--End: Logo-->
+
+
+                    <!--Navigation Resposnive Trigger-->
+                    <div id="mainMenu-trigger">
+                        <button class="lines-button x"> <span class="lines"></span> </button>
+                    </div>
+                    <!--end: Navigation Resposnive Trigger-->
+
+                    <!--Navigation-->
+                    <div id="mainMenu" class="light">
+                            <div class="container">
+                                <nav>
+                                    <ul>
+                                        <li><a href="/">Home</a></li>
+                                        <li><a href="#about">About</a></li>
+                                        <li><a href="/events">Events</a></li>
+                                        <li><a href="#sponsor">Sponsors</a></li>
+                                        <li><a href="#contact">Contact</a></li>
+                                        <%if (user) { %>
+                                            <li><a href="/courses/schedule">courses</a></li>
+                                        <%}%>
+                                        <%if (user) { %>
+                                            <li><a href="/logout">logout</a></li>
+                                        <% } else { %>
+                                            <li><a href="/login">Login</a></li>
+                                        <% } %>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <!--end: Navigation-->
+                </div>
+            </div>
+        </header>

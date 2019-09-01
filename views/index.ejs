@@ -1,70 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-
-    <!-- Document title -->
-    <title>CIVO | Chinese International Volunteer Organization</title>
-    <!-- Stylesheets & Fonts -->
-    <!--FONT LINK--><link href="/css/plugins.css" rel="stylesheet">
-    <link href="/css/style.css" rel="stylesheet">
-    <link href="/css/responsive.css" rel="stylesheet">
-
-</head>
-
-<body>
-
-
-    <!-- Wrapper -->
-    <div id="wrapper">
-
-        <!-- Header -->
-        <header id="header" class="header-transparent dark">
-            <div id="header-wrap">
-                <div class="container">
-                    <!--Logo-->
-                    <div id="logo">
-                        <a href="index.html" class="logo" data-dark-logo="/images/logo-dark.png">
-                            <img src="/images/logo.png" alt="Polo Logo">
-                        </a>
-                    </div>
-                    <!--End: Logo-->
-
-
-                    <!--Navigation Resposnive Trigger-->
-                    <div id="mainMenu-trigger">
-                        <button class="lines-button x"> <span class="lines"></span> </button>
-                    </div>
-                    <!--end: Navigation Resposnive Trigger-->
-
-                    <!--Navigation-->
-                    <div id="mainMenu" class="light">
-                            <div class="container">
-                                <nav>
-                                    <ul>
-                                        <li><a href="/">Home</a></li>
-                                        <li><a href="#about">About</a></li>
-                                        <li><a href="/events">Events</a></li>
-                                        <li><a href="#sponsor">Sponsors</a></li>
-                                        <li><a href="#contact">Contact</a></li>
-                                        <%if (user) { %>
-                                            <li><a href="/courses/schedule">courses</a></li>
-                                        <%}%>
-                                        <%if (user) { %>
-                                            <li><a href="/logout">logout</a></li> 
-                                        <% } else { %>
-                                            <li><a href="/login">Login</a></li>      
-                                        <% } %>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                        <!--end: Navigation-->
-                </div>
-            </div>
-        </header>
+<% include ../views/header %>
         <!-- end: Header -->
 
         <!-- REVOLUTION SLIDER -->
@@ -716,7 +651,7 @@ To become a sponsor of Chinese International Volunteer Organization, please emai
                                 <img src="/images/team/6.jpg">
                             </div>
                             <div class="team-desc">
-                                <h3>Alea Smith</h3>
+                                <h3>Music</h3>
                                 <span>Software Developer</span>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing tristique hendrerit laoreet. </p>
                                 <div class="align-center">
@@ -746,7 +681,7 @@ To become a sponsor of Chinese International Volunteer Organization, please emai
                                 <img src="/images/team/7.jpg">
                             </div>
                             <div class="team-desc">
-                                <h3>Ariol Doe</h3>
+                                <h3>Iris</h3>
                                 <span>Software Developer</span>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing tristique hendrerit laoreet. </p>
                                 <div class="align-center">
@@ -776,7 +711,7 @@ To become a sponsor of Chinese International Volunteer Organization, please emai
                                 <img src="/images/team/8.jpg">
                             </div>
                             <div class="team-desc">
-                                <h3>Emma Ross</h3>
+                                <h3>Eric</h3>
                                 <span>Software Developer</span>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing tristique hendrerit laoreet. </p>
                                 <div class="align-center">
@@ -837,112 +772,7 @@ To become a sponsor of Chinese International Volunteer Organization, please emai
         <!-- end: TEAM -->
 
         <!-- Footer -->
-        <section id="contact">
-        <footer id="footer" class="footer-light">
-            <div class="footer-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <!-- Footer widget area 1 -->
-                            <div class="widget clearfix widget-contact-us" style="background-image: url('images/world-map-dark.png'); background-position: 50% 20px; background-repeat: no-repeat">
-                                <h4>Contact Us</h4>
-                                <ul class="list-icon">
-                                    <li><i class="fa fa-map-marker-alt"></i> 1151 Richmond St
-                                        <br>London, ON. Canada N6A3K7</li>
-                                    <li><i class="fa fa-phone"></i> (778) 223-7992</li>
-                                    <li><i class="far fa-envelope"></i> <a href="info@civo.ca">info@civo.ca</a>
-                                    </li>
-                                    <!-- <li>
-                                        <br><i class="far fa-clock"></i>Monday - Friday: <strong>08:00 - 22:00</strong>
-                                        <br>Saturday, Sunday: <strong>Closed</strong>
-                                    </li> -->
-                                </ul>
-                                <!-- Social icons -->
-                                <div class="social-icons social-icons-border float-left m-t-20">
-                                    <ul>
-                                        <li class="social-rss"><a href=""><i class="fa fa-rss"></i></a></li>
-                                        <li class="social-facebook"><a href="https://www.facebook.com/civouwo/?ref=br_rs"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li class="social-twitter"><a href="https://www.instagram.com/badpanda_666/"><i class="fab fa-instagram"></i></a></li>
-                                        <li class="social-vimeo"><a href="https://www.weibo.com/335727776"><i class="fab fa-weibo"></i></a></li>
-                                        <li class="social-youtube"><a href="https://www.weibo.com/335727776"><i class="fab fa-youtube"></i></a></li>
-                                        <li class="social-pinterest"><a href="https://www.weixin.qq.com"><i class="fab fa-weixin"></i></a></li>
-
-                                    </ul>
-                                </div>
-                                <!-- end: Social icons -->
-                            </div>
-                            <!-- end: Footer widget area 1 -->
-                        </div>
-                        <div class="col-lg-2">
-                            <!-- Footer widget area 2 -->
-                            <div class="widget">
-                                <h4>Quick LInks</h4>
-
-                                  <ul class="list-icon list-icon-arrow">
-                                    <li><a href="/">Home</a></li>
-                                    <li><a href="#about">About</a></li>
-                                    <li><a href="/events">Events</a></li>
-                                    <li><a href="#sponsor">Sponsors</a></li>
-                                    <li><a href="#contact">Contact</a></li>
-                                    <%if (user) { %>
-                                    <li><a href="/courses/schedule"><%=user%></a></li>
-                                    <%}%>
-                                    <li><a href="index">Login</a></li>
-                                </ul>
-                            </div>
-                            <!-- end: Footer widget area 2 -->
-                        </div>
-                        <div class="col-lg-3">
-                            <!-- Footer widget area 3 -->
-                            <div class="widget">
-                                <h4>Latest From Our Blog</h4>
-                                <div class="post-thumbnail-list">
-                                    <div class="post-thumbnail-entry">
-
-                                        <div class="post-thumbnail-content">
-                                            <a href="#">fun news in CIVO</a>
-                                            <span class="post-date"><i class="far fa-clock"></i> 6m ago</span>
-                                            <span class="post-category"><i class="fa fa-tag"></i> Technology</span>
-                                        </div>
-                                    </div>
-                                    <div class="post-thumbnail-entry">
-
-                                        <div class="post-thumbnail-content">
-                                            <a href="#">Updated report for the last event</a>
-                                            <span class="post-date"><i class="far fa-clock"></i> 24h ago</span>
-                                            <span class="post-category"><i class="fa fa-tag"></i> Lifestyle</span>
-                                        </div>
-                                    </div>
-                                    <div class="post-thumbnail-entry">
-
-                                        <div class="post-thumbnail-content">
-                                            <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
-                                            <span class="post-date"><i class="far fa-clock"></i> 11h ago</span>
-                                            <span class="post-category"><i class="fa fa-tag"></i> Lifestyle</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end: Footer widget area 3 -->
-                        </div>
-                        <div class="col-lg-3">
-                            <!-- Footer widget area 4 -->
-                            <div class="widget widget-tweeter" data-username="ardianmusliu" data-limit="2">
-                                <h4>Recent Tweets</h4>
-                            </div>
-                            <!-- end: Footer widget area 4 -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright-content">
-                <div class="container">
-                    <div class="copyright-text text-center">&copy; 2019 CIVO - All Rights Reserved.<a href="http://www.laurenlin.tech" target="_blank">Laxlin</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        </section>
+<%include ../views/footer %>
         <!-- end: Footer -->
 
     </div>
