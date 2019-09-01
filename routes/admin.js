@@ -23,7 +23,7 @@ router.post('/addCourse', function(req, res, next) {
         start_time: start_time,
         end_time: end_time
     }
-    var course = {
+    var newCourse = {
         name: name,
         location: location,
         date: date,
@@ -31,24 +31,20 @@ router.post('/addCourse', function(req, res, next) {
     }
     courseModel.findCourseByName(name).then((course,err) => {
         if(course === null){
-            
-            // courseModel.create(course).then((course,err) => {
-            //     if(err){console.log(err);}
-            //     res.redirect("/admin/manageCourses");
-            // })
+            courseModel.create(newCourse).then((cour,err) => {
+                console.log(cour)
+                if(err){console.log(err);}
+                res.redirect("/admin/manageCourses");
+            })
         }else{
             courseModel.updateCourseTime(course._id, date).then((course,err)=>{
+                console.log(course);
                 if(err){console.log(err);}
                 res.redirect("/admin/manageCourses");
             });
         }
         //console.log(course);
     });
-    // courseModel.create(course).then((course,err) => {
-    //     if(err){console.log(err);}
-    //     res.redirect("/admin/manageCourses");
-    // })
-    //res.render("adminAddCourse");
 });
 router.get('/addEvent', function(req, res, next) {
     res.render("adminAddEvent");

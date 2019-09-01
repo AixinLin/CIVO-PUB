@@ -6,7 +6,7 @@ var userModel = require('../model/user')
 var eventModel = require('../model/event')
 const checkLogin = require('../middlewares/checkLogin').checkLogin
 
-router.get('/', checkLogin,  function(req, res, next) {
+router.get('/',  function(req, res, next) {
   
   eventModel.getAllEvents().then((events,err) => {
     if(err) {console.log(err);}

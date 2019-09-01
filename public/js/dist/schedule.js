@@ -14343,7 +14343,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // change the border color just for fun
       info.el.style.borderColor = 'red';
       console.log(info.event.id);
-      document.getElementById("redirectform").action = "/course/" + info.event.id;
+      document.getElementById("redirectform").action = "/courses/" + info.event.id;
       button.click();
     },
     header: {
@@ -14351,7 +14351,7 @@ document.addEventListener('DOMContentLoaded', function() {
       center: 'title',
       right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
     },
-    defaultDate: '2019-08-12',
+    defaultDate: new Date(),
     selectable: true,
     navLinks: true, // can click day/week names to navigate views
     editable: true,

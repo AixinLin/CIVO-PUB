@@ -6,7 +6,6 @@ var logger = require('morgan');
 var mongodb = require('./config/mongo');
 var session = require('express-session');
 var homeRouter = require('./routes/home');
-var usersRouter = require('./routes/users');
 var coursesRouter = require('./routes/courses');
 var eventRouter = require('./routes/events');
 var adminRouter = require('./routes/admin');
@@ -28,6 +27,7 @@ app.use(session({
   // }),
    // 设置 cookie 中保存 session id 的字段名称
   secret: "civo", // 通过设置 secret 来计算 hash 值并放在 cookie 中，使产生的 signedCookie 防篡改
+  expires: new Date(Date.now() + (30 * 86400 * 1000)),
   resave: true, // 强制更新 session
   saveUninitialized: false, // 设置为 false，强制创建一个 session，即使用户未登录
 }));

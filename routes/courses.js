@@ -38,7 +38,7 @@ router.post('/add', function(req, res, next) {
     
     //console.log(course);
     //add course to the current user with course and current user id
-    userId = "5d6acc7d2d58c30ec9bf9a34";
+    userId = req.session.user._id;
     userModel.addCourse(course,userId).then(function(user,err){
       if(err) {console.log(err);}
       console.log(user);
@@ -71,7 +71,7 @@ router.get('/test', function(req, res, next) {
 //course schedule page
 router.get('/schedule', function(req, res, next) {
   //get current user here
-  var userId = "5d6acc7d2d58c30ec9bf9a34";
+  var userId = req.session.user._id;
 
   //find the current user and get the info and pass the user info in schedule
   

@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var userModel = require('../model/user')
+var userModel = require('../model/user');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -26,7 +26,11 @@ router.post('/login', (req, res, next) => {
     var password = req.fields.password;
     userModel.findUserByEmailandPassword(email,password).then(function(user,err){
       if(err) {console.log(err);}
-      req.session.user = user;
+      if(user !== null){
+        req.session.user = user;
+      }else{
+        res.send("username or password is incorrect");
+      }
       res.redirect("/");
     })
 });
@@ -48,18 +52,31 @@ router.get('/register', function(req, res, next) {
 router.post('/register', function(req, res, next) {
   var email = req.fields.email;
   var password = req.fields.password;
+  var first_name = req.fields.firstname;
+  var last_name = req.fields.lastname;
 
-  let user = {
+
+  var newUser = {
     email: email,
     password: password,
+    first_name: first_name,
+    last_name: last_name
   }
 
-  userModel.create(user).then(function(result,err){
-    if(err) {console.log(err);}
-    console.log(result);
-    req.session.user = result;
-    res.redirect('/');
+  userModel.findUserByEmail(email).then((result,err) => {
+    if(err) {console.log(err)}
+    if(result === null){
+      userModel.create(newUser).then(function(user,err){
+        if(err) {console.log(err);}
+        console.log(user);
+        req.session.user = user;
+        res.redirect('/');
+      })
+    }else{
+      res.send("Email Already Exist");
+    }
   })
+  
   
 });
 module.exports = router;

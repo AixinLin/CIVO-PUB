@@ -18,6 +18,9 @@ module.exports = {
     findUserByEmailandPassword: function(email, password){
         return user.userModel.findOne({email:email, password:password});
     },
+    findUserByEmail: function(email){
+        return user.userModel.findOne({email:email});
+    },
     getAllUsers: function(){
         return user.userModel.find({});
     },
@@ -26,6 +29,7 @@ module.exports = {
             _id:ObjectId(userId)
         })
     },
+    
     getNumOfPeople: function(userId){
         return user.userModel.aggregate([
             //{"$match" : {"_id": {$eq: ObjectId(userId)}}},
